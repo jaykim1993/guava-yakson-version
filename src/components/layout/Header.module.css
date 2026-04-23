@@ -1,0 +1,202 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--color-white);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* 스크롤 시 적용될 스타일 */
+.scrolled {
+    background: var(--color-white);
+    height: 70px;
+    box-shadow: var(--shadow-cta);
+}
+
+.inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+}
+
+.navLink {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 17px;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.actions {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.kakaoIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 50px;
+    color: #191919;
+    background-color: #FEE500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: transform 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cta:hover {
+    transform: translateY(-2px);
+}
+
+/* --- 모바일 대응 --- */
+
+/* --- 1. 버거 버튼 스타일 --- */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.burgerLines {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burgerLines span {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* 햄버거 -> X 애니메이션 */
+.burgerActive span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burgerActive span:nth-child(2) {
+    opacity: 0;
+}
+
+.burgerActive span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-primary);
+}
+
+/* --- 2. 모바일 전용 메뉴판 스타일 --- */
+.mobileMenu {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.mobileMenuOpen {
+    transform: translateY(150%);
+}
+
+.mobileMenu>.navLink {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+/* --- 3. 반응형 대응 (768px 이하) --- */
+@media (max-width: 768px) {
+    .header {
+        height: 60px;
+    }
+    .scrolled{
+        height: 50px;
+    }
+    /* PC 네비게이션 숨기기 */
+    .inner {
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex: none;
+        font-size: 17px;
+    }
+
+    .nav,
+    .actions {
+        display: none;
+        flex: none;
+    }
+
+    /* 버거 버튼 보이기 */
+    .burger {
+        display: block;
+        margin-left: auto;
+    }
+
+
+}

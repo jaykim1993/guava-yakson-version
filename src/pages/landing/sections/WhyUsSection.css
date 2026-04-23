@@ -1,0 +1,59 @@
+.whyus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.whyus-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.whyus-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 4px 0 0 4px;
+}
+
+.whyus-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(44,107,74,0.12);
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.whyus-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.whyus-desc {
+  font-size: 14px;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.whyus-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(44,107,74,0.08);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+}

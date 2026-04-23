@@ -1,0 +1,137 @@
+.finalcta {
+  position: relative;
+  height: 100vh;
+}
+
+.finalcta-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--color-primary) 0%, #1a4a30 100%);
+  z-index: 0;
+}
+
+.finalcta-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,168,56,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,255,255,0.05) 0%, transparent 60%);
+}
+
+.finalcta-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 64px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.finalcta-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-warm);
+  margin-bottom: 16px;
+}
+
+.finalcta-headline {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.finalcta-headline em {
+  font-style: normal;
+  color: var(--color-accent-warm);
+}
+
+.finalcta-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.finalcta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.finalcta-btn-kakao {
+  font-size: 17px;
+  padding: 18px 32px;
+  box-shadow: 0 8px 32px rgba(254, 229, 0, 0.35);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.finalcta-btn-phone {
+  background: rgba(255,255,255,0.12);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.finalcta-btn-phone:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.finalcta-trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.finalcta-trust span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.finalcta-info {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 24px;
+}
+
+.finalcta-info p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+.finalcta-info strong {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .finalcta-headline { font-size: 38px; }
+  .finalcta-buttons {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .finalcta-btn-kakao, .finalcta-btn-phone {
+    width: auto;
+    flex: 1;
+  }
+}
