@@ -1,46 +1,69 @@
-.recommend {
-  min-height: 100vh;
+/* ─────────────────────────────────────────────────────
+   RecommendSection.css
+   디자인 언어: HeroSection / DoctorSection 기준
+───────────────────────────────────────────────────── */
+
+/* ── 섹션 베이스 ──────────────────────────────────── */
+.recommend.section--cream {
+  background: var(--c-cream);
 }
 
 .recommend-inner {
-  padding-top: var(--section-py);
-  padding-bottom: var(--section-py);
+  padding-top: 64px;
+  padding-bottom: 0; /* 클로징 블록이 하단 패딩 담당 */
 }
 
+/* ── 타이틀 em 강조 ───────────────────────────────── */
+.recommend .section-title em {
+  font-style: normal;
+  color: var(--c-moss);
+}
+
+/* ── 구분선 ───────────────────────────────────────── */
+.divider {
+  width: 40px;
+  height: 2px;
+  background: var(--c-gold);
+  margin: 20px 0 28px;
+  border-radius: 2px;
+}
+
+/* ══════════════════════════════════════════════════
+   추천 리스트
+══════════════════════════════════════════════════ */
 .recommend-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 24px;
+  margin-bottom: 48px;
 }
 
 .recommend-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  background: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.recommend-item:hover {
-  transform: translateX(4px);
-  box-shadow: 0 4px 20px rgba(44,107,74,0.12);
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border: 1px solid rgba(74,103,65,.08);
 }
 
 .recommend-emoji {
-  font-size: 24px;
   flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .recommend-text {
   flex: 1;
   font-size: 14px;
+  color: var(--c-earth);
   line-height: 1.6;
-  color: var(--color-text);
   white-space: pre-line;
 }
 
@@ -48,12 +71,88 @@
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  background: var(--color-primary);
-  color: white;
   border-radius: 50%;
+  background: rgba(74,103,65,.10);
+  color: var(--c-moss);
+  font-size: 12px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+}
+
+/* ══════════════════════════════════════════════════
+   클로징 블록 — 다음 섹션 전환 브리지
+══════════════════════════════════════════════════ */
+.recommend-closing {
+  position: relative;
+  text-align: center;
+  padding: 48px 24px 64px;
+  background: linear-gradient(
+    to bottom,
+    var(--c-cream) 0%,
+    var(--c-warm)  100%
+  );
+  margin: 0 -24px; /* section 패딩 상쇄해서 full-width */
+  overflow: hidden;
+}
+
+/* 배경 장식 원 */
+.recommend-closing::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74,103,65,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 상단 세로 라인 */
+.recommend-closing__line {
+  display: block;
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, var(--c-gold));
+  margin: 0 auto 20px;
+}
+
+.recommend-closing__eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 16px;
+}
+
+.recommend-closing__title {
+  font-family: var(--ff-serif);
+  font-size: 26px;
   font-weight: 700;
+  color: var(--c-ink);
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.recommend-closing__title em {
+  font-style: normal;
+  color: var(--c-moss);
+}
+
+.recommend-closing__desc {
+  font-size: 14px;
+  color: var(--c-earth);
+  line-height: 1.8;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+
+/* ══════════════════════════════════════════════════
+   반응형
+══════════════════════════════════════════════════ */
+@media (min-width: 768px) {
+  .recommend-closing__title { font-size: 32px; }
 }

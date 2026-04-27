@@ -36,13 +36,7 @@ const PLANS = [
 export default function PriceSection() {
   return (
     <section className="price section">
-      
-      <br /><br />
-      <h1 style={{ background: "#888" }}>
-        * 보조환/구성 소개
-      </h1>
-      <br />
-
+      <h1>----보조환/구성 소개로 내용 집중필요----</h1>
       <p className="section-label">가격 안내</p>
       <h2 className="section-title">
         부담 없이 시작하는<br />

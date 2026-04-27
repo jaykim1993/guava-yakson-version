@@ -28,13 +28,8 @@ const REVIEWS = [
 export default function ReviewSection() {
   return (
     <section className="review section">
-
-      <br /><br />
-      <h1 style={{ background: "#888" }}>
-        * 후기 섹션
-      </h1>
-      <br />
-
+      <h1>----신뢰형 후기 구조 전환필요----</h1>
+      <h1>---실 후기 자료 대기중----</h1>
       <p className="section-label">실제 후기</p>
       <h2 className="section-title">
         복용하신 분들의<br />
@@ -57,21 +52,18 @@ export default function ReviewSection() {
         ))}
       </div>
 
-      {/* 후기 사진 자리 */}
-      <div className="review-photo-placeholder">
-        <p>📸 실제 후기 사진</p>
-        <p className="review-photo-sub">원장님께 후기 사진 자료 요청 필요</p>
+      <div className="review-more">
+        <div className="review-more__overlay">
+          <div className="review-more__icon">🔒</div>
+          <p className="review-more__text">
+            더 많은 실제 후기는<br />
+            로그인 후 확인하실 수 있습니다
+          </p>
+          <button className="review-more__btn">
+            1초 로그인하고 전체 후기 보기
+          </button>
+        </div>
       </div>
-
-      <a
-        href="https://pf.kakao.com/_xlAzxkxb/chat"
-        className="btn btn-primary"
-        style={{ marginTop: 24 }}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬 나도 시작해보기
-      </a>
     </section>
   )
 }

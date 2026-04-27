@@ -8,7 +8,7 @@ export default function FloatingCTA() {
     const onScroll = () =>
       setVisible(
         window.scrollY > 300 &&
-        window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 300
+        window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 800
       )
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -22,7 +22,7 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        카카오로 무료 상담받기
+        천연 코팅 딸기맛 스틱, 오늘부터 시작하기
       </a>
 
     </div>

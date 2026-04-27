@@ -1,0 +1,420 @@
+/* ─────────────────────────────────────────────────────
+   AboutPage.module.css
+   디자인 언어: HeroSection / DoctorSection 기준
+   토큰: App.css :root 변수 사용
+───────────────────────────────────────────────────── */
+
+/* ══════════════════════════════════════════════════
+   공통 레이아웃
+══════════════════════════════════════════════════ */
+.page      { padding-top: 72px; }
+
+.section {
+  padding: 64px 24px;
+}
+.sectionAlt {
+  padding: 64px 24px;
+  background: var(--c-warm);
+}
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════════════════
+   히어로
+══════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  padding: 80px 24px 64px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 0%,  rgba(74,103,65,.10) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 90% 90%, rgba(184,147,90,.08) 0%, transparent 60%),
+    var(--c-cream);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+/* 상단 골드 라인 */
+.hero::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--c-gold));
+  margin: 0 auto 20px;
+}
+
+.heroEyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-family: var(--ff-serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--c-ink);
+  margin-bottom: 20px;
+}
+.heroTitle em {
+  font-style: normal;
+  color: var(--c-moss);
+}
+
+.heroSub {
+  font-size: 15px;
+  color: var(--c-earth);
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+/* ══════════════════════════════════════════════════
+   원장 소개
+══════════════════════════════════════════════════ */
+.doctorSection {
+  padding: 64px 24px;
+  background: var(--c-cream);
+}
+
+.doctorGrid {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.doctorPhoto {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: rgba(74,103,65,.08);
+  border-radius: 12px;
+  border: 2px dashed rgba(74,103,65,.20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 32px;
+  color: var(--c-moss-lt);
+  font-family: var(--ff-sans);
+}
+.doctorPhoto span:last-child {
+  font-size: 11px;
+  color: var(--c-moss-lt);
+  letter-spacing: 0.04em;
+}
+
+.doctorEyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 8px;
+}
+
+.doctorName {
+  font-family: var(--ff-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--c-ink);
+  margin-bottom: 20px;
+}
+
+.doctorQuote {
+  background: linear-gradient(135deg, rgba(74,103,65,.06), rgba(184,147,90,.06));
+  border-left: 4px solid var(--c-moss);
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 24px;
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  color: var(--c-earth);
+  line-height: 1.8;
+}
+
+.doctorCareer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.doctorCareer li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--c-earth);
+  line-height: 1.5;
+}
+.doctorCareer li::before {
+  content: '';
+  flex-shrink: 0;
+  margin-top: 7px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--c-gold);
+}
+
+/* ══════════════════════════════════════════════════
+   병원 철학
+══════════════════════════════════════════════════ */
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.philosophyCard {
+  background: var(--c-white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border-top: 3px solid var(--c-moss);
+}
+.philosophyCard h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-earth);
+  margin-bottom: 8px;
+}
+.philosophyCard p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════════════════
+   환자에 대한 이해
+══════════════════════════════════════════════════ */
+.understandList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.understandItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border: 1px solid rgba(74,103,65,.08);
+}
+
+.understandNum {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(74,103,65,.10);
+  color: var(--c-moss);
+  font-family: var(--ff-serif);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.understandBody strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-earth);
+  margin-bottom: 4px;
+}
+.understandBody p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ══════════════════════════════════════════════════
+   실제 사진
+══════════════════════════════════════════════════ */
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.photoSlot {
+  aspect-ratio: 4 / 3;
+  background: rgba(74,103,65,.06);
+  border-radius: 10px;
+  border: 1.5px dashed rgba(74,103,65,.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--c-moss-lt);
+  font-size: 22px;
+}
+.photoSlot span:last-child {
+  font-size: 11px;
+  font-family: var(--ff-sans);
+  letter-spacing: 0.04em;
+}
+
+.photoSlot--wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+/* ══════════════════════════════════════════════════
+   상담 CTA
+══════════════════════════════════════════════════ */
+.ctaSection {
+  padding: 64px 24px 80px;
+  background: linear-gradient(160deg, var(--c-moss) 0%, #1a3d20 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(184,147,90,.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,255,255,.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ctaInner {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.ctaEyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 16px;
+}
+
+.ctaTitle {
+  font-family: var(--ff-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--c-white);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+.ctaTitle em {
+  font-style: normal;
+  color: var(--c-gold);
+}
+
+.ctaSub {
+  font-size: 14px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.ctaBtnKakao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #FEE500;
+  color: #3A1D1D;
+  border: none;
+  border-radius: 9999px;
+  padding: 17px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 8px 24px rgba(254,229,0,.30);
+  text-decoration: none;
+}
+.ctaBtnKakao:hover { background: #F5DB00; transform: translateY(-2px); }
+
+.ctaBtnPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  color: var(--c-white);
+  border: 1.5px solid rgba(255,255,255,.28);
+  border-radius: 9999px;
+  padding: 15px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.ctaBtnPhone:hover { background: rgba(255,255,255,.20); }
+
+.ctaTrust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.ctaTrust span {
+  font-size: 12px;
+  color: rgba(255,255,255,.65);
+  background: rgba(255,255,255,.10);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+/* ══════════════════════════════════════════════════
+   반응형
+══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .heroTitle  { font-size: 24px; }
+  .heroSub    { font-size: 14px; }
+
+  .doctorGrid { grid-template-columns: 1fr; gap: 24px; }
+  .doctorPhoto { aspect-ratio: 3 / 2; max-height: 200px; }
+
+  .philosophyGrid { grid-template-columns: 1fr; }
+
+  .photoGrid  { grid-template-columns: repeat(2, 1fr); }
+  .photoSlot--wide { grid-column: span 2; }
+
+  .ctaTitle   { font-size: 22px; }
+  .ctaButtons { gap: 10px; }
+}
+
+@media (min-width: 768px) {
+  .heroTitle  { font-size: 34px; }
+  .ctaTitle   { font-size: 30px; }
+  .ctaButtons { flex-direction: row; }
+  .ctaBtnKakao,
+  .ctaBtnPhone { flex: 1; }
+}

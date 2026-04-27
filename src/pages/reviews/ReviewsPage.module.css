@@ -1,0 +1,204 @@
+/* 공통 */
+.page {
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* 히어로 */
+.page-hero {
+  padding: 60px 20px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.page-hero--short {
+  padding-bottom: 20px;
+}
+
+.section-eyebrow {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.page-hero__title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111;
+}
+
+/* 섹션 */
+.page-section {
+  padding: 24px 16px 40px;
+}
+
+/* 게이트 박스 */
+.reviews-gate {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews-gate__box {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* 아이콘 */
+.reviews-gate__icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+/* 텍스트 */
+.reviews-gate__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.reviews-gate__desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.reviews-gate__sub {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+/* 버튼 */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #2c6b4a;
+  color: #fff;
+}
+
+/* 로딩 */
+.reviews-gate__spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #eee;
+  border-top: 3px solid #2c6b4a;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  animation: spin 0.8s linear infinite;
+}
+
+.reviews-gate__loading-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   카카오 로그인 영역
+========================= */
+
+.kakao-login__header {
+  margin-bottom: 20px;
+}
+
+.kakao-login__logo {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #fee500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kakao-login__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.kakao-login__desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 혜택 리스트 */
+.kakao-login__benefits {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kakao-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.kakao-benefit__icon {
+  font-size: 16px;
+}
+
+/* 카카오 버튼 */
+.kakao-login__btn {
+  width: 100%;
+  margin-top: 8px;
+  background: #fee500;
+  color: #191919;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.kakao-login__btn:hover {
+  filter: brightness(0.95);
+}
+
+/* 하단 약관 */
+.kakao-login__privacy {
+  font-size: 12px;
+  color: #999;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.kakao-login__privacy a {
+  color: #666;
+  text-decoration: underline;
+}

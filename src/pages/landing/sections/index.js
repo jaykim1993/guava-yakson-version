@@ -10,6 +10,7 @@ import { lazy } from 'react'
 const SECTION_MAP = {
   hero:      lazy(() => import('./HeroSection')),
   recommend: lazy(() => import('./RecommendSection')),
+  intro:     lazy(() => import('./IntroSection')),
   whyus:     lazy(() => import('./WhyUsSection')),
   product:   lazy(() => import('./ProductSection')),
   review:    lazy(() => import('./ReviewSection')),

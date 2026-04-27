@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/"            element={<LandingPage />} />
           <Route path="/about"       element={<AboutPage />} />
           <Route path="/reviews"     element={<ReviewsPage />} />
-          <Route path="/treatments"     element={<TreatmentsPage />} />
+          {/* <Route path="/treatments"     element={<TreatmentsPage />} /> */}
         </Routes>
       </main>
       <FloatingCTA />

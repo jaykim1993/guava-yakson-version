@@ -1,59 +1,37 @@
-.product { background: var(--color-bg-section); }
-.product-inner {
-  padding-top: var(--section-py);
-  padding-bottom: var(--section-py);
-}
+/* ─────────────────────────────────────────────────────
+   ProductSection.css
+   디자인 언어: HeroSection / DoctorSection 기준
+───────────────────────────────────────────────────── */
 
-/* 단계별 가격 */
-.product-steps {
-  display: flex;
-  gap: 10px;
-  margin-top: 24px;
-  margin-bottom: 40px;
-}
+.product.section--cream { background: var(--c-cream); }
 
-.step-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 16px 8px;
-  background: var(--color-white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  text-align: center;
-  border-top: 3px solid var(--color-primary);
-}
+.product-inner { padding-top: 64px; padding-bottom: 64px; }
 
-.step-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 0.04em;
-}
+/* 공통 블록 간격 */
+.product-block { margin-bottom: 40px; }
+.product-block:last-of-type { margin-bottom: 0; }
 
-.step-price {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 800;
-  color: var(--color-text);
-}
-
-.step-desc {
-  font-size: 11px;
-  color: var(--color-text-muted);
-  line-height: 1.4;
-}
-
-/* 포함 항목 */
+/* 소제목 */
 .product-subtitle {
-  font-size: 17px;
+  font-family: var(--ff-serif);
+  font-size: 16px;
   font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: 16px;
+  color: var(--c-earth);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.subtitle-note {
+  font-family: var(--ff-sans);
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
 }
 
+/* ══════════════════════════════════════════════════
+   ① 패키지 구성 리스트
+══════════════════════════════════════════════════ */
 .include-list {
   list-style: none;
   display: flex;
@@ -63,75 +41,302 @@
 
 .include-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   padding: 14px 16px;
-  background: var(--color-white);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border: 1px solid rgba(74,103,65,.08);
 }
 
 .include-icon {
-  font-size: 22px;
   flex-shrink: 0;
-  margin-top: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(74,103,65,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .include-item strong {
+  display: block;
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-text);
-  display: block;
+  color: var(--c-earth);
   margin-bottom: 2px;
 }
-
 .include-item p {
-  font-size: 13px;
-  color: var(--color-text-muted);
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
 }
 
-/* 진행 과정 */
-.process-flow {
-  display: flex;
-  align-items: flex-start;
-  gap: 4px;
-  overflow-x: auto;
-  padding-bottom: 4px;
+/* ══════════════════════════════════════════════════
+   ② 단계 카드
+══════════════════════════════════════════════════ */
+.product-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
-.process-step {
+.step-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  flex-shrink: 0;
-  position: relative;
-}
-
-.process-num {
-  width: 44px;
-  height: 44px;
-  background: var(--color-primary);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.process-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-text);
+  padding: 20px 12px 16px;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  border: 1.5px solid rgba(74,103,65,.10);
   text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.step-card--recommended {
+  border-color: var(--c-moss);
+  box-shadow: 0 4px 20px rgba(74,103,65,.15);
+  background: rgba(74,103,65,.03);
+}
+
+.step-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-moss);
+  color: var(--c-white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 9999px;
   white-space: nowrap;
 }
 
-.process-arrow {
-  font-size: 18px;
-  color: var(--color-text-muted);
+.step-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--c-moss);
+  text-transform: uppercase;
+}
+
+.step-price {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c-earth);
+  line-height: 1.1;
+}
+.step-card--recommended .step-price { color: var(--c-moss); }
+
+.step-desc {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.step-sub {
+  font-size: 10px;
+  color: #bbb;
+  margin-top: 2px;
+}
+
+/* ══════════════════════════════════════════════════
+   ③ 기간별 가격표
+══════════════════════════════════════════════════ */
+.price-notice {
+  font-size: 12px;
+  color: var(--c-gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: rgba(184,147,90,.08);
+  border-radius: 6px;
+  border-left: 3px solid var(--c-gold);
+}
+
+.price-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--c-white);
+  font-size: 13px;
+  min-width: 300px;
+}
+
+/* 헤더 */
+.price-table thead tr {
+  background: var(--c-earth);
+  color: var(--c-white);
+}
+.price-table th {
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  white-space: nowrap;
+}
+.price-table th:first-child { text-align: left; padding-left: 14px; }
+
+/* 추천 컬럼 */
+.col-recommended {
+  background: rgba(74,103,65,.06);
+}
+thead .col-recommended {
+  background: var(--c-moss);
+  color: var(--c-white);
+}
+.th-badge {
+  display: inline-block;
+  font-size: 9px;
+  background: var(--c-gold);
+  color: var(--c-white);
+  padding: 1px 6px;
+  border-radius: 9999px;
+  margin-left: 4px;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+/* 바디 */
+.price-table tbody tr {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  transition: background 0.15s;
+}
+.price-table tbody tr:last-child { border-bottom: none; }
+.price-table tbody tr:hover { background: var(--c-cream); }
+.price-table tbody tr:hover .col-recommended { background: rgba(74,103,65,.10); }
+
+.price-table td {
+  padding: 13px 10px;
+  text-align: center;
+  color: var(--c-earth);
+  font-weight: 500;
+}
+.period-cell {
+  text-align: left !important;
+  padding-left: 14px !important;
+  font-weight: 700;
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+tbody .col-recommended {
+  font-weight: 700;
+  color: var(--c-moss);
+}
+
+/* 혜택 요약 */
+.price-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin-top: 12px;
-  padding: 0 4px;
+  padding: 14px 16px;
+  background: rgba(74,103,65,.05);
+  border-radius: 10px;
+}
+.price-benefits li {
+  font-size: 12px;
+  color: var(--c-earth);
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════════════════
+   ④ 비대면 프로세스
+══════════════════════════════════════════════════ */
+.process-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.process-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--c-moss);
+  color: var(--c-white);
+  font-family: var(--ff-serif);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.process-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-earth);
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════════
+   CTA
+══════════════════════════════════════════════════ */
+.product-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 36px;
+  padding: 18px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-decoration: none;
+  background: #FEE500;
+  color: #3A1D1D;
+  box-shadow: 0 8px 24px rgba(254,229,0,.30);
+  transition: background 0.2s, transform 0.15s;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+.product-cta:hover {
+  background: #F5DB00;
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(254,229,0,.30); }
+  50%       { box-shadow: 0 8px 32px rgba(254,229,0,.50); }
+}
+
+/* ══════════════════════════════════════════════════
+   반응형
+══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .product-steps { grid-template-columns: 1fr; gap: 16px; }
+  .step-card { flex-direction: row; text-align: left; padding: 16px; gap: 12px; align-items: flex-start; }
+  .step-badge { top: -8px; }
+
+  .process-steps { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .process-arrow { transform: rotate(90deg); margin: 0 0 0 16px; }
+}
+
+@media (min-width: 768px) {
+  .price-table { font-size: 14px; }
+  .price-table th,
+  .price-table td { padding: 14px 16px; }
 }

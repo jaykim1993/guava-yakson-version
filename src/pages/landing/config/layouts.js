@@ -20,10 +20,11 @@ const LAYOUT_CONFIGS = {
   default: [
     'hero',
     'recommend',
+    'intro',
     'whyus',
-    'product',
     'review',
-    'doctor',
+    'product',
+    // 'doctor',
     'faq',
     'price',
     'finalcta',
@@ -32,7 +33,7 @@ const LAYOUT_CONFIGS = {
   // 블로그 유입: 신뢰 구축 → 차별점 → 전환
   blog: [
     'hero',
-    'doctor',     // 원장 신뢰 먼저
+    // 'doctor', 
     'whyus',
     'recommend',
     'product',
@@ -45,7 +46,7 @@ const LAYOUT_CONFIGS = {
   // CRM 문자 유입: 이미 인지된 고객 → 바로 가격/CTA
   crm: [
     'hero',
-    'price',      // 가격 확인이 재방문 목적
+    'price',
     'product',
     'review',
     'faq',
@@ -72,7 +73,7 @@ const LAYOUT_CONFIGS = {
     'price',
     'review',
     'faq',
-    'doctor',
+    // 'doctor',
     'finalcta',
   ],
 }

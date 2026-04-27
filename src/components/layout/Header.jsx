@@ -17,8 +17,8 @@ export default function Header() {
   // 1. 네비게이션 메뉴 데이터 (확장 내용 여기 추가)
   const navMenu = [
     { id: 1, label: "병원소개", target: "/about", show: true },
-    { id: 2, label: "진료안내", target: "/treatments", show: true },
-    // { id: 3, label: "진료후기", target: "/reviews", show: true },
+    // { id: 2, label: "진료안내", target: "/treatments", show: true },
+    { id: 3, label: "후기", target: "/reviews", show: true },
     // { id: 4, label: "오시는 길", target: "#location", show: true },
     // { id: 5, label: "공지사항", target: "#notice", show: false },
   ];

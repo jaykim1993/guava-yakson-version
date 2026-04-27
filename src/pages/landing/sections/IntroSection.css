@@ -1,0 +1,214 @@
+
+.intro-solution {
+  background: var(--c-cream);
+  padding: 56px 24px 48px;
+}
+
+.intro-solution__lead {
+  text-align: center;
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--c-earth);
+  line-height: 2;
+  margin: 0 auto 40px;
+  max-width: 480px;
+}
+
+/* ── 제품 카드 ────────────────────────────────────── */
+.intro-product {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 28px;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 8px  rgba(0,0,0,.05),
+    0 8px 32px rgba(0,0,0,.04);
+  border: 1px solid rgba(74,103,65,.10);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 우상단 장식 */
+.intro-product::before {
+  content: '';
+  position: absolute;
+  top: -48px; right: -48px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74,103,65,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.intro-product__image {
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, var(--c-warm) 0%, var(--c-sage) 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--c-moss);
+  letter-spacing: 0.04em;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-product__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    rgba(255,255,255,.12) 12px,
+    rgba(255,255,255,.12) 13px
+  );
+}
+
+.intro-product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intro-product__sub {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  font-weight: 600;
+}
+
+.intro-product__title {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--c-earth);
+  line-height: 1.3;
+}
+
+.intro-product__desc {
+  font-size: 14px;
+  color: var(--c-moss-lt);
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════════════════════════
+   4. 기능 카드 그리드
+══════════════════════════════════════════════════ */
+.intro-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 640px;
+  margin: 28px auto 0;
+  background: var(--c-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  border: 1px solid rgba(74,103,65,.10);
+  overflow: hidden;
+}
+
+.intro-card {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  border-right: 1px solid rgba(74,103,65,.08);
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.intro-card:last-child { border-right: none; }
+.intro-card:hover      { background: var(--c-cream); }
+
+.intro-card__icon {
+  font-size: 26px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.intro-card:hover .intro-card__icon {
+  transform: translateY(-3px) scale(1.08);
+}
+
+.intro-card__title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-earth);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+/* ══════════════════════════════════════════════════
+   5. 신뢰 강조 박스
+══════════════════════════════════════════════════ */
+.intro-trust-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 640px;
+  margin: 28px auto 0;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(74,103,65,.06), rgba(184,147,90,.06));
+  border-left: 4px solid var(--c-moss);
+  border-radius: 0 12px 12px 0;
+}
+
+.intro-trust-box__mark {
+  font-size: 18px;
+  color: var(--c-moss);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.intro-trust-box__text {
+  font-family: var(--ff-serif);
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--c-earth);
+  line-height: 1.85;
+}
+
+/* ══════════════════════════════════════════════════
+   반응형
+══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .intro .section-title   { font-size: 24px; }
+  .intro-problem          { font-size: 18px; padding: 40px 20px; }
+  .intro-problem::before,
+  .intro-problem::after   { display: none; }
+  .intro-solution__lead   { font-size: 16px; }
+  .intro-solution         { padding: 40px 20px 32px; }
+
+  .intro-product {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .intro-product__image {
+    aspect-ratio: 16 / 9;
+    max-height: 200px;
+  }
+
+  .intro-cards { grid-template-columns: repeat(2, 1fr); }
+  .intro-card:nth-child(2) { border-right: none; }
+  .intro-card:nth-child(1),
+  .intro-card:nth-child(2) { border-bottom: 1px solid rgba(74,103,65,.08); }
+
+  .intro-trust-box       { margin-top: 20px; }
+  .intro-trust-box__text { font-size: 15px; }
+}
+
+@media (min-width: 768px) {
+  .intro .section-title { font-size: 32px; }
+  .intro-problem        { font-size: 26px; }
+}
