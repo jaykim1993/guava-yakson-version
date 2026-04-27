@@ -3,6 +3,14 @@ import './DoctorSection.css'
 export default function DoctorSection() {
   return (
     <section className="doctor section">
+
+    
+      <br /><br />
+      <h1 style={{ background: "#888" }}>
+        * 의사소개
+      </h1>
+      <br />
+
       <p className="section-label">대표원장 소개</p>
       <h2 className="section-title">
         <em>25년 임상경력</em><br />

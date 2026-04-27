@@ -17,14 +17,13 @@ export default function FloatingCTA() {
   return (
     <div className={`floating-cta ${visible ? 'floating-cta--visible' : ''}`}>
       <a
-        href="https://pf.kakao.com/_your_channel/chat"
+        href="https://pf.kakao.com/_xlAzxkxb/chat"
         className="floating-btn floating-btn--kakao"
         target="_blank"
         rel="noopener noreferrer"
       >
-        💬 카카오로 무료 상담받기
+        카카오로 무료 상담받기
       </a>
-      병원 진료 및 전화 상담 가능 시간 (09:00-19:00)
 
     </div>
   )

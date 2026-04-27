@@ -1,5 +1,4 @@
-
-import { TestTube , Leaf, ShieldCheck, Lightning } from "phosphor-react";
+import { getIcon } from "../../../components/icons/icons";
 import './ProductSection.css'
 
 const ICON_STYLE = {
@@ -15,11 +14,12 @@ const STEPS = [
 ]
 
 const INCLUDES = [
-  { icon: <TestTube {...ICON_STYLE} />, name: '감비환스틱', detail: '1개월 90포 (독자처방·코팅·딸기맛착향)' },
-  { icon: <Leaf {...ICON_STYLE} />, name: '디톡스환', detail: '다이어트 중 변비 해결' },
-  { icon: <ShieldCheck {...ICON_STYLE} />, name: '폭식환', detail: '과식 시 과잉영양분 배설' },
-  { icon: <Lightning {...ICON_STYLE} />, name: '약손정', detail: '식욕 올라올 때 감비환과 함께 복용' },
-]
+  { icon: "TestTube", name: '감비환스틱', detail: '1개월 90포 (독자처방·코팅·딸기맛착향)' },
+  { icon: "Leaf", name: '디톡스환', detail: '다이어트 중 변비 해결' },
+  { icon: "ShieldCheck", name: '폭식환', detail: '과식 시 과잉영양분 배설' },
+  { icon: "Lightning", name: '약손정', detail: '식욕 올라올 때 감비환과 함께 복용' },
+];
+
 
 const PROCESS = [
   { n: '01', label: '구글폼 접수' },
@@ -60,15 +60,17 @@ export default function ProductSection() {
         {/* 포함 항목 */}
         <h3 className="product-subtitle">패키지 포함 항목</h3>
         <ul className="include-list">
-          {INCLUDES.map((item) => (
+          {INCLUDES.map((item) => {
+            const Icon = getIcon(item.icon);
+            return (
             <li key={item.name} className="include-item">
-              <span className="include-icon">{item.icon}</span>
+              <span className="include-icon">{Icon && <Icon {...ICON_STYLE} />}</span>
               <div>
                 <strong>{item.name}</strong>
                 <p>{item.detail}</p>
               </div>
             </li>
-          ))}
+          )})}
         </ul>
 
         {/* 진행 과정 */}

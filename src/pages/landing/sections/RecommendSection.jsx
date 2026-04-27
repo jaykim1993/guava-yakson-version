@@ -1,5 +1,5 @@
+import { getIcon } from "../../../components/icons/icons";
 import './RecommendSection.css'
-import { Pill, CurrencyKrw, Package, ArrowsClockwise, Scales } from "phosphor-react"
 
 const ICON_STYLE = {
   size: 24,
@@ -8,12 +8,12 @@ const ICON_STYLE = {
 };
 
 const TARGETS = [
-  { emoji: <Pill {...ICON_STYLE} />, text: '한약이 쓰고 냄새날까봐\n걱정되셨던 분' },
-  { emoji: <CurrencyKrw {...ICON_STYLE} />, text: '비싼 다이어트 한약이\n부담스러웠던 분' },
-  { emoji: <Package {...ICON_STYLE} />, text: '직접 방문하기 어려워\n비대면으로 받고 싶은 분' },
-  { emoji: <ArrowsClockwise {...ICON_STYLE} />, text: '다른 한의원 감비환\n효과가 없었던 분' },
-  { emoji: <Scales {...ICON_STYLE} />, text: '20대~40대\n과체중 여성분' },
-]
+  { icon: "Pill", text: '한약이 쓰고 냄새날까봐\n걱정되셨던 분' },
+  { icon: "CurrencyKrw", text: '비싼 다이어트 한약이\n부담스러웠던 분' },
+  { icon: "Package", text: '직접 방문하기 어려워\n비대면으로 받고 싶은 분' },
+  { icon: "ArrowsClockwise", text: '다른 한의원 감비환\n효과가 없었던 분' },
+  { icon: "Scales", text: '20대~40대\n과체중 여성분' },
+];
 
 export default function RecommendSection() {
   return (
@@ -31,13 +31,15 @@ export default function RecommendSection() {
         <div className="divider" />
 
         <ul className="recommend-list">
-          {TARGETS.map((t, i) => (
-            <li key={i} className="recommend-item">
-              <span className="recommend-emoji">{t.emoji}</span>
-              <span className="recommend-text">{t.text}</span>
+          {TARGETS.map((target, idx) => {
+            const Icon = getIcon(target.icon);
+            return (
+            <li key={idx} className="recommend-item">
+              <span className="recommend-emoji">{Icon && <Icon {...ICON_STYLE} />}</span>
+              <span className="recommend-text">{target.text}</span>
               <span className="recommend-check">✓</span>
             </li>
-          ))}
+          )})}
         </ul>
 
         <a
