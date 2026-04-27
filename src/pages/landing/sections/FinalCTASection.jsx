@@ -3,13 +3,6 @@ import './FinalCTASection.css'
 export default function FinalCTASection() {
   return (
     <section className="finalcta">
-
-      <br /><br />
-      <h1 style={{ background: "#888" }}>
-        * 최종 CTA
-      </h1>
-      <br />
-
       <div className="finalcta-bg" />
       <div className="section finalcta-content">
         <p className="finalcta-label">지금 바로 시작하세요</p>

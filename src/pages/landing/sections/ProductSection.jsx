@@ -44,7 +44,7 @@ export default function ProductSection() {
   return (
     <section className="product section--cream">
       <div className="section product-inner">
-      <h1>----구성 복잡 / 명료하게.----</h1>
+      <h1>**구성 복잡 / 명료하게**</h1>
         {/* 헤더 */}
         <p className="section-label">상품 안내</p>
         <h2 className="section-title">

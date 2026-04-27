@@ -41,8 +41,8 @@ export default function FAQSection() {
 
   return (
     <section className="faq section--cream">
-      <h1>----질문 많다----</h1>
-      <h1>----하단 주의사항 내용 필요----</h1>
+      <h1>**질문 많다**</h1>
+      <h1>**하단 주의사항 내용 필요**</h1>
       <div className="section faq-inner">
         <p className="section-label">자주 묻는 질문</p>
         <h2 className="section-title">
