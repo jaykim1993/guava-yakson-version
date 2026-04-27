@@ -18,8 +18,9 @@ const TARGETS = [
 export default function RecommendSection() {
   return (
     <section className="recommend section--cream">
-      <h1>**흐름 / 문장 수정중**</h1>
+      
       <div className="section recommend-inner">
+        <h1>**흐름 / 문장 수정중**</h1>
         <h2 className="section-title">
           "혹시 이런 고민<br />
           <em>요즘 자주 하고 계신가요?"</em>

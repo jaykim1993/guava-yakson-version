@@ -11,9 +11,10 @@ const CARDS = [
 export default function IntroSection() {
   return (
     <section className="intro section">
-      <h1>**제품 등장 위치 조정중**</h1>
+      
       {/* ③ 해결 선언 + 제품 등장 */}
       <div className="intro-solution">
+        <h1>**제품 등장 위치 조정중**</h1>
         <div className="intro-product">
           <div className="intro-product__image">
             <span>제품 이미지</span>
