@@ -1,4 +1,4 @@
-import { getIcon } from "../../../components/icons/icons";
+import { getIcon } from "../../../components/icons/Icons";
 import './RecommendSection.css'
 
 const ICON_STYLE = {
