@@ -146,7 +146,7 @@ export default function ProductSection() {
                 <tr>
                   <th></th>
                   <th>1단계</th>
-                  <th className="col-recommended"><span className="th-badge">🔥</span>2단계</th>
+                  <th>2단계</th>
                   <th>3단계</th>
                 </tr>
               </thead>
