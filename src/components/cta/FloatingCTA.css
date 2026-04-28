@@ -38,3 +38,9 @@
   box-shadow: 0 4px 20px rgba(254, 229, 0, 0.5);
 }
 .floating-btn--kakao:hover { opacity: 0.9; transform: translateY(-2px); }
+
+@media (min-width: 480px) {
+  .floating-btn{
+    width: 60%;
+  }
+}

@@ -125,7 +125,7 @@ export default function ProductSection() {
             </ul>
 
             <a
-              href="https://pf.kakao.com/_your_channel/chat"
+              href="https://pf.kakao.com/_xlAzxkxb/chat"
               className={`btn ${plan.highlight ? 'btn-primary' : 'btn-outline'}`}
               target="_blank"
               rel="noopener noreferrer"

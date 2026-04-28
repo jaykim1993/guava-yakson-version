@@ -8,7 +8,7 @@ export default function FloatingCTA() {
     const onScroll = () =>
       setVisible(
         window.scrollY > 300 &&
-        window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 800
+        window.scrollY + window.innerHeight < document.documentElement.scrollHeight - 500
       )
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
