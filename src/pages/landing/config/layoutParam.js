@@ -1,5 +1,5 @@
 /**
- * config/layouts.js
+ * config/layoutParam.js
  *
  * 유입경로(src 파라미터)별 섹션 렌더링 순서를 정의
  * 마케터/기획자가 코드 최소 지식으로 수정할 수 있도록

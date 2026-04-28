@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
 
 import SECTION_MAP from './sections/index.js';
-import LAYOUT_CONFIGS from './config/layouts.js';
-import { useSourceParam } from './hooks/useSourceParam';
+import LAYOUT_CONFIGS from './config/layoutParam.js';
+import { useSourceParam } from './hooks/useSourceParam.js';
 
 // ─── 섹션 로딩 중 fallback
 function SectionSkeleton() {

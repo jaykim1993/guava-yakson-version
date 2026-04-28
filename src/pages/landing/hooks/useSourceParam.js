@@ -5,7 +5,7 @@
  * 나중에 analytics 이벤트, AB 테스트 연동도 여기서 처리합니다.
  */
 
-import LAYOUT_CONFIGS from '../config/layouts.js'
+import LAYOUT_CONFIGS from '../config/layoutParam.js'
 
 export function useSourceParam() {
   const params = new URLSearchParams(window.location.search)
