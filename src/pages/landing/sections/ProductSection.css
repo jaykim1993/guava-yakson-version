@@ -2,14 +2,6 @@
    ProductSection.css — 리뉴얼
 ───────────────────────────────────────────────────── */
 
-.product { background: var(--color-bg); }
-
-.product-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--section-py) var(--section-px);
-}
-
 .product-block {
   margin: 64px 0;
 }
@@ -18,10 +10,10 @@
 /* 소제목 */
 .product-subtitle {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--color-primary);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 20px;
   display: flex;
@@ -35,6 +27,7 @@
   height: 16px;
   background: var(--color-primary);
   border-radius: 2px;
+  flex-shrink: 0;
 }
 .subtitle-note {
   font-family: var(--font-body);
@@ -59,7 +52,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 18px 20px;
+  padding: 16px 20px;
   background: var(--color-white);
   border-radius: var(--radius-md);
   border: 1px solid rgba(61,149,103,0.1);
@@ -73,8 +66,8 @@
 
 .include-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-sm);
   background: rgba(61,149,103,0.08);
   display: flex;
@@ -87,7 +80,7 @@
   font-size: 14px;
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 .include-item p {
   font-size: 12px;
@@ -96,74 +89,117 @@
 }
 
 /* ══════════════════════════════════════════════════
-   ② 단계 카드
+   ② 단계 선택 (plan-card)
 ══════════════════════════════════════════════════ */
-.product-steps {
+.plan-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.step-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 22px 20px;
+.plan-card {
   background: var(--color-white);
   border-radius: var(--radius-md);
-  border: 1.5px solid rgba(0,0,0,0.06);
+  padding: 24px;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition);
+  border: 2px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
-.step-card:hover { transform: translateY(-2px); }
+.plan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
 
-.step-card--recommended {
+.plan-card--highlight {
   border-color: var(--color-primary);
-  background: rgba(61,149,103,0.03);
+  background: linear-gradient(135deg, #fff, rgba(61,149,103,0.03));
+  box-shadow: 0 8px 32px rgba(61,149,103,0.15);
 }
 
-.step-badge {
-  position: absolute;
-  top: -11px;
-  left: 20px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 3px 12px;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
+.plan-top { margin-bottom: 16px; }
+
+.plan-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.step-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-primary);
-  text-transform: uppercase;
-  min-width: 48px;
-}
-
-.step-price {
-  font-family: var(--font-display);
-  font-size: 22px;
+.plan-name {
+  font-size: 17px;
   font-weight: 700;
   color: var(--color-text);
-  flex: 1;
 }
-.step-card--recommended .step-price { color: var(--color-primary); }
 
-.step-desc {
-  font-size: 12px;
+.plan-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  background: rgba(0,0,0,0.06);
+  border-radius: var(--radius-full);
   color: var(--color-text-sub);
-  line-height: 1.5;
-  text-align: right;
+}
+.plan-tag--hot {
+  background: rgba(61,149,103,0.12);
+  color: var(--color-primary);
 }
 
-.step-sub {
-  display: none; /* 카드 안에서 정리 */
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+.plan-price-num {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+.plan-card--highlight .plan-price-num { color: var(--color-primary); }
+.plan-price-unit {
+  font-size: 15px;
+  color: var(--color-text-sub);
+}
+
+.plan-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.plan-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: rgba(0,0,0,0.02);
+  border-radius: var(--radius-sm);
+}
+.plan-includes li {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-includes li span {
+  color: var(--color-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* plan-card 안 버튼 */
+.plan-card .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 13px 16px;
 }
 
 /* ══════════════════════════════════════════════════
@@ -196,7 +232,7 @@
 }
 
 .price-table thead tr {
-  background: rgba(53, 112, 81, 0.658);
+  background: var(--color-primary);
   color: var(--color-white);
 }
 .price-table th {
@@ -209,19 +245,17 @@
 }
 .price-table th:first-child { text-align: left; padding-left: 16px; }
 
-.col-recommended { 
-  background: rgba(61, 149, 103, 0.13); 
-}
+.col-recommended { background: rgba(61,149,103,0.10); }
 thead .col-recommended {
-  background: var(--color-primary);
+  background: rgba(255,255,255,0.15);
   color: var(--color-white);
+  font-weight: 700;
 }
-
 
 .price-table tbody tr { border-bottom: 1px solid rgba(0,0,0,.05); }
 .price-table tbody tr:last-child { border-bottom: none; }
 .price-table tbody tr:hover { background: var(--color-bg-section); }
-.price-table tbody tr:hover .col-recommended { background: rgba(61,149,103,0.10); }
+.price-table tbody tr:hover .col-recommended { background: rgba(61,149,103,0.13); }
 
 .price-table td {
   padding: 14px 10px;
@@ -259,7 +293,7 @@ tbody .col-recommended {
 }
 
 /* ══════════════════════════════════════════════════
-   ④ 비대면 프로세스 — 핵심 강조
+   ④ 비대면 프로세스
 ══════════════════════════════════════════════════ */
 .process-block {
   background: var(--color-white);
@@ -283,18 +317,18 @@ tbody .col-recommended {
   border-bottom: 1px solid rgba(0,0,0,0.05);
   position: relative;
 }
-.process-step:last-child { border-bottom: none; padding-bottom: 0; }
 .process-step:first-child { padding-top: 0; }
+.process-step:last-child { border-bottom: none; padding-bottom: 0; }
 
-/* 왼쪽 연결선 */
+/* 세로 연결선 */
 .process-step:not(:last-child)::after {
   content: '';
   position: absolute;
   left: 23px;
-  top: 52px;
+  top: 45px;
+  height: 100px;
   width: 2px;
-  height: calc(100% - 32px);
-  background: linear-gradient(to bottom, var(--color-primary), rgba(61,149,103,0.1));
+  background: var(--color-primary);
 }
 
 .process-num {
@@ -343,6 +377,7 @@ tbody .col-recommended {
   box-shadow: 0 8px 24px rgba(254,229,0,0.35);
   transition: transform var(--transition), box-shadow var(--transition);
   animation: pulse 2.5s ease-in-out infinite;
+  white-space: nowrap;
 }
 .product-cta:hover {
   transform: translateY(-2px);
@@ -354,146 +389,38 @@ tbody .col-recommended {
   50%       { box-shadow: 0 8px 36px rgba(254,229,0,0.55); }
 }
 
-.price-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.price-card {
-  background: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  box-shadow: var(--shadow-card);
-  border: 2px solid transparent;
-  transition: all var(--transition);
-}
-
-.price-card--highlight {
-  border-color: var(--color-primary);
-  background: linear-gradient(135deg, #fff, rgba(44,107,74,0.03));
-  box-shadow: 0 8px 32px rgba(44,107,74,0.15);
-}
-
-.price-card-top {
-  margin-bottom: 20px;
-}
-
-.price-tag-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.price-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-.price-tag {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 10px;
-  background: rgba(0,0,0,0.07);
-  border-radius: var(--radius-full);
-  color: var(--color-text-sub);
-}
-
-.price-tag--hot {
-  background: rgba(44,107,74,0.12);
-  color: var(--color-primary);
-}
-
-.price-amount {
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-  margin-bottom: 6px;
-}
-
-.price-num {
-  font-family: var(--font-display);
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--color-text);
-}
-
-.price-unit {
-  font-size: 16px;
-  color: var(--color-text-sub);
-}
-
-.price-desc {
-  font-size: 13px;
-  color: var(--color-text-muted);
-}
-
-.price-includes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
-  padding: 16px;
-  background: rgba(0,0,0,0.02);
-  border-radius: var(--radius-sm);
-}
-
-.price-includes li {
-  font-size: 13px;
-  color: var(--color-text-sub);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.price-includes li span {
-  color: var(--color-primary);
-  font-weight: 700;
-}
-
-
 /* ══════════════════════════════════════════════════
    반응형
 ══════════════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .product-block { margin: 52px 0; }
+  .product-block { margin: 48px 0; }
 
   .include-item { padding: 14px 16px; gap: 12px; }
   .include-icon { width: 38px; height: 38px; }
   .include-item strong { font-size: 13px; }
 
-  .step-card { padding: 18px 16px; gap: 14px; }
-  .step-price { font-size: 20px; }
+  .plan-card { padding: 20px 18px; }
+  .plan-price-num { font-size: 26px; }
 
-  .process-block { padding: 28px 18px; }
+  .process-block { padding: 24px 16px; }
   .process-label { font-size: 14px; margin-top: 10px; }
 }
 
 @media (min-width: 768px) {
-  .product-inner { max-width: 640px; }
-  .product-steps {
+  .product-inner {  width: 100vw; }
+
+  /* 단계 카드 3열 */
+  .plan-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 16px;
   }
-  .step-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-    padding: 28px 16px 22px;
-  }
-  .step-desc { text-align: center; }
-  .step-price { font-size: 20px; }
 
+  /* 프로세스 가로 */
   .process-steps {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 0;
   }
   .process-step {
     flex-direction: column;
@@ -503,19 +430,20 @@ tbody .col-recommended {
     padding: 0;
     flex: 1;
   }
-  .process-step::after {
+  /* 가로 연결선으로 교체 */
+  .process-step:not(:last-child)::after {
     top: 23px;
-    left: 60%;
-    width: 80%;
+    left: 56%;
+    width: 88%;
     height: 2px;
     background: linear-gradient(to right, var(--color-primary), rgba(61,149,103,0.1));
   }
-  .process-label { margin-top: 14px; font-size: 13px; }
+  .process-label {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
   .price-table { font-size: 14px; }
   .price-table th,
   .price-table td { padding: 16px; }
-  .price-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 }

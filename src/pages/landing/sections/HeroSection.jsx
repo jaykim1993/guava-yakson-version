@@ -1,3 +1,4 @@
+import { KakaoCTA, GoogleFormCTA, PhoneCTA } from '../../../components/cta/ButtonCTA'
 import './HeroSection.css'
 
 export default function HeroSection() {
@@ -45,28 +46,9 @@ export default function HeroSection() {
 
         {/* CTA */}
         <div className="hero-ctas">
-          <a
-            href="https://pf.kakao.com/_xlAzxkxb/chat"
-            className="btn btn-kakao"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            카카오 문의
-          </a>
-
-          <a
-            href="https://docs.google.com/forms/d/16D6tjTxBdkDnno9i0UQk5kU6Qbqw6uLkq1uRQQzpcd8/edit"
-            className="btn btn-outline"
-          >
-            구글 폼 접수
-          </a>
-
-          <a
-            href="tel:031-338-2299"
-            className="btn btn-outline"
-          >
-            📞 031-338-2299
-          </a>
+          <KakaoCTA />
+          <GoogleFormCTA />
+          <PhoneCTA />
         </div>
       </div>
     </section>

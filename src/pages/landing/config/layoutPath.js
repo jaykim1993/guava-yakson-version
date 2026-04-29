@@ -6,7 +6,7 @@
  *
  *
  * 사용 가능한 섹션 키:
- *   hero | recommend | whyus | product | review | doctor | faq | price | finalcta
+ *   hero | recommend | intro | doctor | product | review |  faq | supplement | finalcta
  *
  * URL 예시:
  *   /diet      → 한방 다이어트 레이아웃
@@ -23,64 +23,58 @@ const LAYOUT_CONFIGS = {
     'hero',
     'recommend',
     'intro',
-    'whyus',
     'review',
     'product',
     'faq',
-    'price',
+    'supplement',
     'finalcta',
   ],
 
   diet: [
     'hero',
-    'recommend',  // 이런 분께 추천
-    'product',    // 한방 다이어트 치료
-    'whyus',      // 왜 우리 한의원인가
+    'recommend',
+    'product',
     'review',
-    'price',
+    'supplement',
     'faq',
     'finalcta',
   ],
 
   backpain: [
     'hero',
-    'intro',      // 허리 통증 원인 설명
-    'whyus',
+    'intro',
     'product',
     'review',
     'faq',
-    'price',
+    'supplement',
     'finalcta',
   ],
 
   knee: [
     'hero',
-    'intro',      // 무릎 관절 원인 설명
+    'intro',
     'product',
-    'whyus',
     'review',
-    'price',
+    'supplement',
     'finalcta',
   ],
 
   skin: [
     'hero',
-    'recommend',  // 피부 고민 타입별
+    'recommend',
     'product',
-    'review',     // 후기가 핵심
-    'whyus',
+    'review',
     'faq',
-    'price',
+    'supplement',
     'finalcta',
   ],
 
   insomnia: [
     'hero',
-    'recommend',  // 이런 증상 있으신가요
-    'whyus',
+    'recommend',
     'product',
     'review',
-    'price',
+    'supplement',
     'faq',
     'finalcta',
   ],

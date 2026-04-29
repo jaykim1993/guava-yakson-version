@@ -42,7 +42,6 @@ export default function FAQSection() {
   return (
     <section className="faq section--cream">
       <div className="section faq-inner">
-        <p className="section-label">자주 묻는 질문</p>
         <h2 className="section-title">FAQ</h2>
         <div className="divider" />
 
@@ -72,12 +71,26 @@ export default function FAQSection() {
 
         {/* 주의사항 */}
         <div className="faq-notice">
-          <span className="faq-notice__icon">⚠️</span>
           <div className="faq-notice__body">
-            <strong className="faq-notice__title">복용 시 주의사항</strong>
+            <strong className="faq-notice__title">
+              <span className="faq-notice__bang">!</span> 복용 시 주의사항
+            </strong>
             <p className="faq-notice__text">
-              복용 초기 신진대사가 증진되면서 두통, 어지럼증, 가슴 두근거림, 손떨림, 입마름, 변비, 수면장애 등이 나타날 수 있습니다.<br/>
-              물을 충분히 섭취(1L 가량)하면서 약 1주일 정도 지나면 대부분 소실됩니다.
+              <strong>[복용 금지]</strong><br />
+              - 결핵·출혈성질환·정신질환 / 암 치료 중·갑상선기능 항진증<br />
+              - 간·심장·신장질환 / 영유아·고령자·임신부·모유수유 중<br />
+              - 심각한 피부질환·알러지 심한 분 / 혈소판감소증
+              <br /><br />
+
+              <strong>[권장하지 않는 경우]</strong><br />
+              - 소식하는 분으로 기존 양약·한약으로도 체중감량이 안된 분<br />
+              (신진대사 저하)
+              <br /><br />
+
+              <strong>[주의]</strong><br />
+              - 당뇨약 복용 중인 경우 금식 시 저혈당 쇼크 주의<br />
+              - 신지로이드 복용 중인 경우 오전 감비환은 식후 복용<br />
+              - 속 쓰림 증상 있을 시 식후 복용 권장
             </p>
           </div>
         </div>

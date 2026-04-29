@@ -3,21 +3,6 @@
    디자인 언어: HeroSection / DoctorSection 기준
 ───────────────────────────────────────────────────── */
 
-/* ── 섹션 베이스 ──────────────────────────────────── */
-.recommend.section--cream {
-  background: var(--c-cream);
-}
-
-.recommend-inner {
-  padding-top: 64px;
-  padding-bottom: 0; /* 클로징 블록이 하단 패딩 담당 */
-}
-
-/* ── 타이틀 em 강조 ───────────────────────────────── */
-.recommend .section-title em {
-  font-style: normal;
-  color: var(--c-moss);
-}
 
 /* ── 구분선 ───────────────────────────────────────── */
 .divider {
@@ -44,7 +29,7 @@
   align-items: center;
   gap: 14px;
   padding: 14px 16px;
-  background: var(--c-white);
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.04);
   border: 1px solid rgba(74,103,65,.08);
@@ -87,26 +72,12 @@
 .recommend-closing {
   position: relative;
   text-align: center;
-  padding: 48px 24px 64px;
   background: linear-gradient(
     to bottom,
     var(--c-cream) 0%,
     var(--c-warm)  100%
   );
-  margin: 0 -24px; /* section 패딩 상쇄해서 full-width */
   overflow: hidden;
-}
-
-/* 배경 장식 원 */
-.recommend-closing::before {
-  content: '';
-  position: absolute;
-  top: -80px; left: 50%;
-  transform: translateX(-50%);
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(74,103,65,.07) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 /* 상단 세로 라인 */
@@ -136,19 +107,44 @@
   margin-bottom: 16px;
 }
 
-.recommend-closing__title em {
-  font-style: normal;
-  color: var(--c-moss);
-}
+
 
 .recommend-closing__desc {
   font-size: 14px;
   color: var(--c-earth);
   line-height: 1.8;
   opacity: 0.75;
-  margin-bottom: 32px;
+}
+/* ══════════════════════════════════════════════════
+   ④ 마무리 카피
+══════════════════════════════════════════════════ */
+.intro-closing {
+  max-width: var(--max-width);
+  margin: 50px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
+.intro-closing__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.intro-closing__sub {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  padding: 10px 20px;
+  border: 1px solid rgba(61,149,103,0.2);
+  border-radius: var(--radius-full);
+  background: rgba(61,149,103,0.04);
+}
 
 /* ══════════════════════════════════════════════════
    반응형

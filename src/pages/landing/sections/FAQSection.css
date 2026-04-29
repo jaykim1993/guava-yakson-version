@@ -1,4 +1,7 @@
-.faq { background: var(--color-bg-section); }
+.faq {
+  background: var(--color-bg-section);
+}
+
 .faq-inner {
   padding-top: var(--section-py);
   padding-bottom: var(--section-py);
@@ -15,12 +18,12 @@
   background: var(--color-white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow var(--transition);
 }
 
 .faq-item--open {
-  box-shadow: 0 4px 20px rgba(44,107,74,0.12);
+  box-shadow: 0 4px 20px rgba(44, 107, 74, 0.12);
 }
 
 .faq-question {
@@ -69,7 +72,7 @@
   align-items: flex-start;
   gap: 12px;
   padding: 0 20px 18px;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   padding-top: 14px;
 }
 
@@ -77,7 +80,7 @@
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  background: rgba(232,168,56,0.2);
+  background: rgba(232, 168, 56, 0.2);
   color: var(--color-accent);
   border-radius: 6px;
   display: flex;
@@ -91,7 +94,8 @@
   font-size: 14px;
   color: var(--color-text-sub);
   line-height: 1.9;
-  white-space: pre-line; /* \n 줄바꿈 적용 */
+  white-space: pre-line;
+  /* \n 줄바꿈 적용 */
 }
 
 /* 주의사항 */
@@ -99,25 +103,37 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 50px;
   padding: 16px 20px;
   background: rgba(232, 168, 56, 0.08);
   border: 1px solid rgba(232, 168, 56, 0.3);
   border-radius: var(--radius-md);
 }
 
-.faq-notice__icon {
-  font-size: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
 
 .faq-notice__title {
   display: block;
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-accent);
+  color: rgb(247, 77, 77);
   margin-bottom: 6px;
+}
+
+.faq-notice__bang {
+  transform: translateY(-2px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(247, 77, 77);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 800;
+  margin-right: 6px;
+  padding-left: 1px;
+  vertical-align: middle;
 }
 
 .faq-notice__text {
@@ -156,6 +172,7 @@
 }
 
 @media (max-width: 480px) {
+
   .faq-q-mark,
   .faq-a-mark {
     width: 20px;

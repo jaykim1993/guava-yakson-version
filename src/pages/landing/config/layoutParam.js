@@ -1,4 +1,4 @@
-/**
+intro-trust/**
  * config/layoutParam.js
  *
  * 유입경로(src 파라미터)별 섹션 렌더링 순서를 정의
@@ -6,7 +6,7 @@
  *
  *
  * 사용 가능한 섹션 키:
- *   hero | recommend | whyus | product | review | doctor | faq | price | finalcta
+ *   hero | recommend | whyus | product | review | doctor | faq | supplement | finalcta
  *
  * URL 예시:
  *   /?src=blog   → blog 레이아웃
@@ -21,12 +21,11 @@ const LAYOUT_CONFIGS = {
     'hero',
     'recommend',
     'intro',
-    'whyus',
     'review',
     'product',
     // 'doctor',
     'faq',
-    'price',
+    'supplement',
     'finalcta',
   ],
 
@@ -34,11 +33,10 @@ const LAYOUT_CONFIGS = {
   blog: [
     'hero',
     // 'doctor', 
-    'whyus',
     'recommend',
     'product',
     'review',
-    'price',
+    'supplement',
     'faq',
     'finalcta',
   ],
@@ -46,7 +44,7 @@ const LAYOUT_CONFIGS = {
   // CRM 문자 유입: 이미 인지된 고객 → 바로 가격/CTA
   crm: [
     'hero',
-    'price',
+    'supplement',
     'product',
     'review',
     'faq',
@@ -59,8 +57,7 @@ const LAYOUT_CONFIGS = {
     'review',     // 후기가 가장 강력한 설득
     'recommend',
     'product',
-    'whyus',
-    'price',
+    'supplement',
     'faq',
     'finalcta',
   ],
@@ -68,9 +65,8 @@ const LAYOUT_CONFIGS = {
   // 검색광고 (네이버/구글 키워드): 차별점 명확히 → 전환
   search: [
     'hero',
-    'whyus',      // 차별점 먼저
     'product',
-    'price',
+    'supplement',
     'review',
     'faq',
     // 'doctor',

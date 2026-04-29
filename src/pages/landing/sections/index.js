@@ -11,12 +11,11 @@ const SECTION_MAP = {
   hero:      lazy(() => import('./HeroSection')),
   recommend: lazy(() => import('./RecommendSection')),
   intro:     lazy(() => import('./IntroSection')),
-  whyus:     lazy(() => import('./WhyUsSection')),
   product:   lazy(() => import('./ProductSection')),
   review:    lazy(() => import('./ReviewSection')),
   doctor:    lazy(() => import('./DoctorSection')),
   faq:       lazy(() => import('./FAQSection')),
-  price:     lazy(() => import('./PriceSection')),
+  supplement:     lazy(() => import('./SupplementSection')),
   finalcta:  lazy(() => import('./FinalCTASection')),
 }
 

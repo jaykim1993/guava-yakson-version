@@ -28,9 +28,9 @@ const REVIEWS = [
 export default function ReviewSection() {
   return (
     <section className="review section">
-      <h1>**신뢰형 후기 구조 전환필요**</h1>
-      <h1>**실 후기 자료 대기중**</h1>
-      <p className="section-label">실제 후기</p>
+      <div className="review-product__image">
+          <img src="./hwanHolding.png" alt="약손감비환스틱" />
+      </div>
       <h2 className="section-title">
         복용하신 분들의<br />
         <em>진짜 변화</em>
