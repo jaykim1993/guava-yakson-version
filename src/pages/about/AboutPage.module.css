@@ -7,18 +7,27 @@
 /* ══════════════════════════════════════════════════
    공통 레이아웃
 ══════════════════════════════════════════════════ */
-.page      { padding-top: 72px; }
+.page {
+  padding-top: 72px;
+  margin: 0 auto;
+  max-width: 960px;
+}
 
 .section {
   padding: 64px 24px;
 }
+
 .sectionAlt {
   padding: 64px 24px;
   background: var(--c-warm);
 }
+
 .inner {
-  max-width: 720px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center; */
 }
 
 /* ══════════════════════════════════════════════════
@@ -27,23 +36,9 @@
 .hero {
   position: relative;
   padding: 80px 24px 64px;
-  text-align: center;
-  background:
-    radial-gradient(ellipse 70% 55% at 50% 0%,  rgba(74,103,65,.10) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 90% 90%, rgba(184,147,90,.08) 0%, transparent 60%),
-    var(--c-cream);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  /* text-align: center; */
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
   overflow: hidden;
-}
-
-/* 상단 골드 라인 */
-.hero::before {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, transparent, var(--c-gold));
-  margin: 0 auto 20px;
 }
 
 .heroEyebrow {
@@ -56,17 +51,20 @@
 }
 
 .heroTitle {
-  font-family: var(--ff-serif);
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.45;
-  color: var(--c-ink);
+  line-height: 1.35;
+  color: var(--color-text);
   margin-bottom: 20px;
 }
+
 .heroTitle em {
   font-style: normal;
-  color: var(--c-moss);
+  color: var(--color-primary);
+  position: relative;
 }
+
 
 .heroSub {
   font-size: 15px;
@@ -84,7 +82,6 @@
 }
 
 .doctorGrid {
-  max-width: 720px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -92,25 +89,17 @@
   align-items: flex-start;
 }
 
-.doctorPhoto {
+.profileContainer {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  background: rgba(74,103,65,.08);
-  border-radius: 12px;
-  border: 2px dashed rgba(74,103,65,.20);
-  display: flex;
-  flex-direction: column;
+  aspect-ratio: 1 / 1;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 32px;
-  color: var(--c-moss-lt);
-  font-family: var(--ff-sans);
 }
-.doctorPhoto span:last-child {
-  font-size: 11px;
-  color: var(--c-moss-lt);
-  letter-spacing: 0.04em;
+
+.profile {
+  border-radius: 10px;
+  opacity: 0.9;
+  /* border: 2px dashed rgba(74, 103, 65, .20); */
 }
 
 .doctorEyebrow {
@@ -131,7 +120,7 @@
 }
 
 .doctorQuote {
-  background: linear-gradient(135deg, rgba(74,103,65,.06), rgba(184,147,90,.06));
+  background: linear-gradient(135deg, rgba(74, 103, 65, .06), rgba(184, 147, 90, .06));
   border-left: 4px solid var(--c-moss);
   padding: 20px;
   border-radius: 0 10px 10px 0;
@@ -148,6 +137,7 @@
   flex-direction: column;
   gap: 8px;
 }
+
 .doctorCareer li {
   display: flex;
   align-items: flex-start;
@@ -156,6 +146,7 @@
   color: var(--c-earth);
   line-height: 1.5;
 }
+
 .doctorCareer li::before {
   content: '';
   flex-shrink: 0;
@@ -180,15 +171,17 @@
   background: var(--c-white);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
   border-top: 3px solid var(--c-moss);
 }
+
 .philosophyCard h3 {
   font-size: 14px;
   font-weight: 700;
   color: var(--c-earth);
   margin-bottom: 8px;
 }
+
 .philosophyCard p {
   font-size: 13px;
   color: #666;
@@ -212,8 +205,8 @@
   padding: 18px 20px;
   background: var(--c-white);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
-  border: 1px solid rgba(74,103,65,.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+  border: 1px solid rgba(74, 103, 65, .08);
 }
 
 .understandNum {
@@ -221,7 +214,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(74,103,65,.10);
+  background: rgba(74, 103, 65, .10);
   color: var(--c-moss);
   font-family: var(--ff-serif);
   font-size: 14px;
@@ -238,6 +231,7 @@
   color: var(--c-earth);
   margin-bottom: 4px;
 }
+
 .understandBody p {
   font-size: 13px;
   color: #666;
@@ -249,16 +243,13 @@
 ══════════════════════════════════════════════════ */
 .photoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   margin-top: 28px;
 }
 
 .photoSlot {
   aspect-ratio: 4 / 3;
-  background: rgba(74,103,65,.06);
-  border-radius: 10px;
-  border: 1.5px dashed rgba(74,103,65,.18);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -267,10 +258,10 @@
   color: var(--c-moss-lt);
   font-size: 22px;
 }
-.photoSlot span:last-child {
-  font-size: 11px;
-  font-family: var(--ff-sans);
-  letter-spacing: 0.04em;
+
+.photoSlot>img {
+  border-radius: 10px;
+  width: 100%;
 }
 
 .photoSlot--wide {
@@ -282,7 +273,7 @@
    상담 CTA
 ══════════════════════════════════════════════════ */
 .ctaSection {
-  padding: 64px 24px 80px;
+  padding: 64px 10px 80px;
   background: linear-gradient(160deg, var(--c-moss) 0%, #1a3d20 100%);
   position: relative;
   overflow: hidden;
@@ -294,15 +285,15 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(184,147,90,.18) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,255,255,.04) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(184, 147, 90, .18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255, 255, 255, .04) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .ctaInner {
   position: relative;
-  max-width: 480px;
   margin: 0 auto;
+  max-width: 720px;
 }
 
 .ctaEyebrow {
@@ -322,6 +313,7 @@
   line-height: 1.45;
   margin-bottom: 12px;
 }
+
 .ctaTitle em {
   font-style: normal;
   color: var(--c-gold);
@@ -329,7 +321,7 @@
 
 .ctaSub {
   font-size: 14px;
-  color: rgba(255,255,255,.65);
+  color: rgba(255, 255, 255, .65);
   line-height: 1.8;
   margin-bottom: 36px;
 }
@@ -341,80 +333,52 @@
   margin-bottom: 28px;
 }
 
-.ctaBtnKakao {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: #FEE500;
-  color: #3A1D1D;
-  border: none;
-  border-radius: 9999px;
-  padding: 17px 28px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-  box-shadow: 0 8px 24px rgba(254,229,0,.30);
-  text-decoration: none;
-}
-.ctaBtnKakao:hover { background: #F5DB00; transform: translateY(-2px); }
-
-.ctaBtnPhone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: rgba(255,255,255,.12);
-  color: var(--c-white);
-  border: 1.5px solid rgba(255,255,255,.28);
-  border-radius: 9999px;
-  padding: 15px 28px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-}
-.ctaBtnPhone:hover { background: rgba(255,255,255,.20); }
-
-.ctaTrust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-.ctaTrust span {
-  font-size: 12px;
-  color: rgba(255,255,255,.65);
-  background: rgba(255,255,255,.10);
-  padding: 4px 12px;
-  border-radius: 9999px;
-}
 
 /* ══════════════════════════════════════════════════
    반응형
 ══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .heroTitle  { font-size: 24px; }
-  .heroSub    { font-size: 14px; }
+  .heroTitle {
+    font-size: 24px;
+  }
 
-  .doctorGrid { grid-template-columns: 1fr; gap: 24px; }
-  .doctorPhoto { aspect-ratio: 3 / 2; max-height: 200px; }
+  .heroSub {
+    font-size: 14px;
+  }
 
-  .philosophyGrid { grid-template-columns: 1fr; }
+  .doctorGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 
-  .photoGrid  { grid-template-columns: repeat(2, 1fr); }
-  .photoSlot--wide { grid-column: span 2; }
+  .doctorPhoto {
+    aspect-ratio: 3 / 2;
+    max-height: 200px;
+  }
 
-  .ctaTitle   { font-size: 22px; }
-  .ctaButtons { gap: 10px; }
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photoSlot--wide {
+    grid-column: span 2;
+  }
+
+  .ctaTitle {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 768px) {
-  .heroTitle  { font-size: 34px; }
-  .ctaTitle   { font-size: 30px; }
-  .ctaButtons { flex-direction: row; }
-  .ctaBtnKakao,
-  .ctaBtnPhone { flex: 1; }
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .ctaTitle {
+    font-size: 30px;
+  }
 }

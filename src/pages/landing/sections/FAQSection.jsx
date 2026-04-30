@@ -76,6 +76,7 @@ export default function FAQSection() {
               <span className="faq-notice__bang">!</span> 복용 시 주의사항
             </strong>
             <p className="faq-notice__text">
+              <br />
               <strong>[복용 금지]</strong><br />
               - 결핵·출혈성질환·정신질환 / 암 치료 중·갑상선기능 항진증<br />
               - 간·심장·신장질환 / 영유아·고령자·임신부·모유수유 중<br />

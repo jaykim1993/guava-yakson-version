@@ -8,18 +8,14 @@
 /* ══════════════════════════════════════════════════
    ① 제품 등장
 ══════════════════════════════════════════════════ */
-.intro-product {
-  display: grid;
-  align-items: center;
-  margin: 0 auto;
-}
 
 .intro-product__image {
+  width: 80%;
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   box-shadow: var(--shadow-card);
-  margin-bottom: 30px;
+  margin: 40px auto;
 }
 
 .intro-product__image > img {

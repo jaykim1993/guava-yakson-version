@@ -46,22 +46,19 @@ export default function IntroSection() {
   return (
     <section className="intro section">
 
-        <div className="intro-product__content">
-          <span className="intro-product__sub">Natural Diet Solution</span>
-          <h2 className="intro-product__title">
-            약손<br />감비환스틱
-          </h2>
-          <p className="intro-product__desc">
-            한약 특유의 냄새와 복용 부담을 줄이고<br />
-            상큼한 딸기향으로 맛있게, 간편하게
-          </p>
-        </div>
+      <div className="intro-product__content">
+        <span className="intro-product__sub">Natural Diet Solution</span>
+        <h2 className="intro-product__title">
+          약손<br />감비환스틱
+        </h2>
+        <p className="intro-product__desc">
+          한약 특유의 냄새와 복용 부담을 줄이고<br />
+          상큼한 딸기향으로 맛있게, 간편하게
+        </p>
+      </div>
       {/* ① 제품 등장 */}
-      <div className="intro-product">
-        <div className="intro-product__image">
-          <img src="./gambihwan.png" alt="약손감비환스틱" />
-        </div>
-
+      <div className="intro-product__image">
+        <img src="./gambihwan.png" alt="약손감비환스틱" />
       </div>
 
       {/* ② 핵심 기능 */}
@@ -88,7 +85,7 @@ export default function IntroSection() {
         </div>
       </div>
 
-      
+
       <div className="divider" />
       <h2 className="section-title">
         약손감비환이<br />
