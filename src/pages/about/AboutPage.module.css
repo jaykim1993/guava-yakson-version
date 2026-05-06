@@ -98,8 +98,6 @@
 
 .profile {
   border-radius: 10px;
-  opacity: 0.9;
-  /* border: 2px dashed rgba(74, 103, 65, .20); */
 }
 
 .doctorEyebrow {
@@ -112,7 +110,7 @@
 }
 
 .doctorName {
-  font-family: var(--ff-serif);
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 700;
   color: var(--c-ink);

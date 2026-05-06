@@ -79,8 +79,10 @@
 
 /* ── idle 상태 ──────────────────────────────────── */
 .gateIcon {
-  font-size: 36px;
+  width: 40px;
   display: block;
+  margin: 0 auto;
+  opacity: 0.8;
   margin-bottom: 16px;
 }
 
@@ -201,7 +203,7 @@
   font-weight: 500;
 }
 
-.kakaoBenefitIcon { font-size: 15px; }
+.kakaoBenefitIcon { width: 25px; }
 
 /* 카카오 버튼 */
 .kakaoBtn {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RiKakaoTalkFill } from "react-icons/ri";
 import styles from "./ReviewsPage.module.css";
 
 export default function ReviewsPage() {
@@ -29,7 +30,7 @@ export default function ReviewsPage() {
 
         {step === "idle" && (
           <div className={styles.gateBox}>
-            <span className={styles.gateIcon}>⚖️</span>
+            <img className={styles.gateIcon} src="./icons/stethoscope.png" />
             <h2 className={styles.gateTitle}>의료법 안내</h2>
             <p className={styles.gateDesc}>
               의료법 제56조에 의거하여 환자 후기는<br />
@@ -56,7 +57,7 @@ export default function ReviewsPage() {
         {step === "kakao" && (
           <div className={styles.gateBox}>
             <div className={styles.kakaoHeader}>
-              <div className={styles.kakaoLogo}><KakaoIcon /></div>
+              <div className={styles.kakaoLogo}><RiKakaoTalkFill /></div>
               <h2 className={styles.kakaoTitle}>카카오 로그인</h2>
               <p className={styles.kakaoDesc}>
                 카카오 계정으로 간편하게 로그인하고<br />
@@ -66,21 +67,21 @@ export default function ReviewsPage() {
 
             <div className={styles.kakaoBenefits}>
               <div className={styles.kakaoBenefit}>
-                <span className={styles.kakaoBenefitIcon}>⚡</span>
+                <img className={styles.kakaoBenefitIcon} src="./icons/lightning.png" />
                 <span>1초 만에 가입 완료</span>
               </div>
               <div className={styles.kakaoBenefit}>
-                <span className={styles.kakaoBenefitIcon}>🔒</span>
+                <img className={styles.kakaoBenefitIcon} src="./icons/lock.png" />
                 <span>별도 회원가입 불필요</span>
               </div>
               <div className={styles.kakaoBenefit}>
-                <span className={styles.kakaoBenefitIcon}>📱</span>
+                <img className={styles.kakaoBenefitIcon} src="./icons/device-mobile.png" />
                 <span>카카오톡 계정 그대로 사용</span>
               </div>
             </div>
 
             <button className={styles.kakaoBtn} onClick={handleKakaoLogin}>
-              <KakaoIcon />
+              <RiKakaoTalkFill />
               카카오로 시작하기
             </button>
 
@@ -92,16 +93,5 @@ export default function ReviewsPage() {
 
       </section>
     </div>
-  );
-}
-
-function KakaoIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12 3C6.477 3 2 6.477 2 10.8c0 2.7 1.636 5.07 4.1 6.51L5.1 21l4.68-2.46c.72.1 1.46.16 2.22.16 5.523 0 10-3.477 10-7.8S17.523 3 12 3z"
-        fill="#3A1D1D"
-      />
-    </svg>
   );
 }
