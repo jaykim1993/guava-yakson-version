@@ -45,7 +45,7 @@ export default function HeroSection() {
         </div>
 
         {/* CTA */}
-        <div className="hero-ctas">
+        <div className="ctas">
           <KakaoCTA />
           <GoogleFormCTA />
           <PhoneCTA />

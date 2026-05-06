@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 48px;
+  margin-bottom: 120px;
 }
 
 .recommend-item {
@@ -46,7 +46,7 @@
 
 .recommend-text {
   flex: 1;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--c-earth);
   line-height: 1.6;
   white-space: pre-line;
@@ -72,41 +72,21 @@
 .recommend-closing {
   position: relative;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    var(--c-cream) 0%,
-    var(--c-warm)  100%
-  );
   overflow: hidden;
 }
 
-/* 상단 세로 라인 */
-.recommend-closing__line {
-  display: block;
-  width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, transparent, var(--c-gold));
-  margin: 0 auto 20px;
-}
-
-.recommend-closing__eyebrow {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-  margin-bottom: 16px;
-}
 
 .recommend-closing__title {
-  font-family: var(--ff-serif);
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 700;
   color: var(--c-ink);
   line-height: 1.45;
   margin-bottom: 16px;
 }
-
+.recommend-closing__img {
+  margin: 60px auto;
+}
 
 
 .recommend-closing__desc {
@@ -120,7 +100,7 @@
 ══════════════════════════════════════════════════ */
 .intro-closing {
   max-width: var(--max-width);
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -151,4 +131,10 @@
 ══════════════════════════════════════════════════ */
 @media (min-width: 768px) {
   .recommend-closing__title { font-size: 32px; }
+
+}
+@media (max-width: 450px) {
+  .recommend-text {
+    font-size: 13px;
+  }
 }

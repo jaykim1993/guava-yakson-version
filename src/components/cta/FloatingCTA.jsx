@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './FloatingCTA.css'
+import './CTA.css'
 
 export default function FloatingCTA() {
   const [visible, setVisible] = useState(false)

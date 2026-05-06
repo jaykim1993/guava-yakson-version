@@ -29,7 +29,7 @@ export default function Header() {
       label: "카카오 채널",
       url: "https://pf.kakao.com/_xlAzxkxb/chat",
       icon: <RiKakaoTalkFill />,
-      show: false
+      show: true
     },
     cta: {
       label: "간편접수",
@@ -63,7 +63,6 @@ export default function Header() {
         <div className={styles.inner}>
           {/* 로고 영역 */}
           <Link to="/" className={styles.logo}>
-            {/* <span className={styles.logoMark}></span> */}
             <span className={styles.logoText}>용인약손한의원</span>
           </Link>
 

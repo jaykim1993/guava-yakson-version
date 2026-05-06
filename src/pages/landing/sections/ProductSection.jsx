@@ -163,9 +163,9 @@ export default function ProductSection() {
             </table>
           </div>
           <ul className="price-benefits">
-            <li>📦 2개월 이상 — 무료배송 + 감비환 10포 추가</li>
-            <li>📦 3개월 이상 — 무료배송 + 감비환 20포 추가</li>
-            <li>📦 6개월 이상 — 무료배송 + 감비환 50포 추가</li>
+            <li><img src='./icons/package.png'/> 2개월 이상 — 무료배송 + 감비환 10포 추가</li>
+            <li><img src='./icons/package.png'/> 3개월 이상 — 무료배송 + 감비환 20포 추가</li>
+            <li><img src='./icons/package.png'/> 6개월 이상 — 무료배송 + 감비환 50포 추가</li>
           </ul>
         </div>
 
@@ -182,10 +182,11 @@ export default function ProductSection() {
               ))}
             </div>
           </div>
+          <img src='./내원.png' />
         </div>
 
         {/* CTA */}
-        <div className="hero-ctas">
+        <div className="ctas">
           <KakaoCTA />
           <GoogleFormCTA />
         </div>

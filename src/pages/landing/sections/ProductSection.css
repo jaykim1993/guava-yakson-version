@@ -291,7 +291,14 @@ tbody .col-recommended {
   color: var(--color-text-sub);
   line-height: 1.6;
 }
-
+.price-benefits li img{
+  display: inline-block;
+  width: 25px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  opacity: 0.8;
+}
 /* ══════════════════════════════════════════════════
    ④ 비대면 프로세스
 ══════════════════════════════════════════════════ */

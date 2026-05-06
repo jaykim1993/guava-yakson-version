@@ -44,15 +44,11 @@ export default function RecommendSection() {
         {/* 클로징 */}
         <div className="recommend-closing">
           <span className="recommend-closing__line" aria-hidden="true" />
-          <p className="recommend-closing__eyebrow">약손한의원의 약속</p>
           <h2 className="recommend-closing__title">
             혼자 고민하지 마세요<br />
             저희가 함께하겠습니다
           </h2>
-          <p className="recommend-closing__desc">
-            25년 임상경력의 원장과<br />
-            5인의 전문의가 직접 설계하였습니다
-          </p>
+          <img className="recommend-closing__img" src="./홍보.png"/>
         </div>
       {/* ④ 마무리 카피 */}
       <div className="intro-closing">

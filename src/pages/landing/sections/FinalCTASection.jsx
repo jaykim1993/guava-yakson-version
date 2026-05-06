@@ -1,4 +1,7 @@
+import { KakaoCTA, GoogleFormCTA, PhoneCTA } from '../../../components/cta/ButtonCTA'
 import './FinalCTASection.css'
+
+
 
 export default function FinalCTASection() {
   return (
@@ -17,21 +20,11 @@ export default function FinalCTASection() {
           비대면 접수 후 빠르게 연락드립니다
         </p>
 
-        <div className="finalcta-buttons">
-          <a
-            href="https://pf.kakao.com/_your_channel/chat"
-            className="btn btn-kakao finalcta-btn-kakao"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            💬 카카오로 무료 상담받기
-          </a>
-          <a
-            href="tel:031-338-2299"
-            className="btn finalcta-btn-phone"
-          >
-            📞 031-338-2299
-          </a>
+        {/* CTA */}
+        <div className="ctas">
+          <KakaoCTA />
+          <GoogleFormCTA />
+          <PhoneCTA />
         </div>
 
         <div className="finalcta-trust">

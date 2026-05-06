@@ -47,6 +47,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 35px;
+    padding-right: 20px;
 }
 
 .navLink {
@@ -167,7 +168,9 @@
     text-align: center;
     padding: 0;
 }
+@media (max-width: 950px) {
 
+}
 /* --- 3. 반응형 대응 (768px 이하) --- */
 @media (max-width: 768px) {
     .header {

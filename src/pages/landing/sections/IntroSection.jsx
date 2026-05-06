@@ -2,10 +2,10 @@ import { KakaoCTA, GoogleFormCTA, PhoneCTA } from '../../../components/cta/Butto
 import "./IntroSection.css";
 
 const CARDS = [
-  { icon: "🌊", title: "식욕 억제", desc: "과식 충동을 자연스럽게 조절" },
-  { icon: "💧", title: "부종 감소", desc: "불필요한 수분 순환 개선" },
-  { icon: "✨", title: "신진대사 촉진", desc: "체지방 연소 효율 향상" },
-  { icon: "🌿", title: "건강한 감량", desc: "급격한 단기 감량 지양" },
+  { icon: "./icons/shield-check.png", title: "식욕 억제", desc: "과식 충동을 자연스럽게 조절" },
+  { icon: "./icons/drop.png", title: "부종 감소", desc: "불필요한 수분 순환 개선" },
+  { icon: "./icons/thermometer.png", title: "신진대사 촉진", desc: "체지방 연소 효율 향상" },
+  { icon: "./icons/trend-down.png", title: "건강한 감량", desc: "급격한 단기 감량 지양" },
 ];
 
 const TRUST_STATS = [
@@ -58,14 +58,16 @@ export default function IntroSection() {
       </div>
       {/* ① 제품 등장 */}
       <div className="intro-product__image">
-        <img src="./gambihwan.png" alt="약손감비환스틱" />
+        {/* <img src="./gambihwan.png" alt="약손감비환스틱" /> */}
+        <img src="./약손감비환.png" alt="약손감비환스틱" />
+        <img src="./배너.png" alt="약손감비환스틱" />
       </div>
 
       {/* ② 핵심 기능 */}
       <div className="intro-cards">
         {CARDS.map(({ icon, title, desc }) => (
           <div className="intro-card" key={title}>
-            <span className="intro-card__icon">{icon}</span>
+            <img className="intro-card__icon" src={icon}/>
             <strong className="intro-card__title">{title}</strong>
             <p className="intro-card__desc">{desc}</p>
           </div>
@@ -84,7 +86,10 @@ export default function IntroSection() {
           ))}
         </div>
       </div>
-
+      <div className="intro-product__image">
+        {/* <img src="./gambihwan.png" alt="약손감비환스틱" /> */}
+        <img src="./감비환스틱광고1.jpg" alt="약손감비환스틱" />
+      </div>
 
       <div className="divider" />
       <h2 className="section-title">
@@ -105,7 +110,7 @@ export default function IntroSection() {
       </div>
 
       {/* CTA */}
-      <div className="hero-ctas">
+      <div className="ctas">
         <KakaoCTA />
         <GoogleFormCTA />
       </div>

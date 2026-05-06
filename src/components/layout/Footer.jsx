@@ -11,7 +11,7 @@ export default function Footer() {
     },
     details: [
       { id: 1, label: "대표원장", value: "이관형", show: true },
-      { id: 2, label: "사업자등록번호", value: "000-00-00000", show: true },
+      { id: 2, label: "사업자등록번호", value: "000-00-00000", show: false },
       { id: 3, label: "주소", value: "경기도 용인시 처인구 금령로71번길 16 대흥빌딩 2층", show: true },
       { id: 4, label: "대표번호", value: "031-338-2299", show: true },
     ],
@@ -29,7 +29,6 @@ export default function Footer() {
         {/* 브랜드 로고 섹션 */}
         {footerData.hospital.show && (
           <div className={styles.hospital}>
-            {/* <span className={styles.logoMark}>{footerData.hospital.logo}</span> */}
             <span className={styles.logoName}>{footerData.hospital.name}</span>
           </div>
         )}
