@@ -18,11 +18,11 @@ export default function FloatingCTA() {
     <div className={`floating-cta ${visible ? 'floating-cta--visible' : ''}`}>
       <a
         href="https://pf.kakao.com/_xlAzxkxb/chat"
-        className="floating-btn floating-btn--kakao"
+        className="floating-btn"
         target="_blank"
         rel="noopener noreferrer"
       >
-        천연 코팅 딸기맛 스틱, 오늘부터 시작하기
+        <img src="./icons/chat-circle-dots.png" /> 나에게 맞는지 상담하기
       </a>
 
     </div>

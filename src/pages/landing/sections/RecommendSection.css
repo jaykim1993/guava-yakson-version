@@ -1,41 +1,66 @@
 /* ─────────────────────────────────────────────────────
    RecommendSection.css
-   디자인 언어: HeroSection / DoctorSection 기준
 ───────────────────────────────────────────────────── */
 
+/* ══════════════════════════════════════════════════
+   배경 이미지 래퍼
+══════════════════════════════════════════════════ */
 
-/* ── 구분선 ───────────────────────────────────────── */
-.divider {
-  width: 40px;
-  height: 2px;
-  background: var(--c-gold);
-  margin: 20px 0 28px;
-  border-radius: 2px;
+/* 배경 레이어 */
+.recommend-bg1 {
+  position: absolute;
+  inset: 0;
+  width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  object-position: center;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.recommend-bg2 {
+  position: absolute;
+  inset: 0;
+  width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 0;
+  flex-shrink: 0;
 }
 
 /* ══════════════════════════════════════════════════
    추천 리스트
 ══════════════════════════════════════════════════ */
 .recommend-list {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 120px;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .recommend-item {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 16px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.04);
-  border: 1px solid rgba(74,103,65,.08);
+  padding: 12px 16px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(61, 149, 103, .08);
 }
 
-.recommend-emoji {
+.recommend-icon {
   flex-shrink: 0;
   width: 32px;
   height: 32px;
@@ -47,7 +72,7 @@
 .recommend-text {
   flex: 1;
   font-size: 15px;
-  color: var(--c-earth);
+  color: var(--color-text-sub);
   line-height: 1.6;
   white-space: pre-line;
 }
@@ -57,8 +82,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(74,103,65,.10);
-  color: var(--c-moss);
+  background: var(--color-primary);
+  color: #fff;
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -67,74 +92,76 @@
 }
 
 /* ══════════════════════════════════════════════════
-   클로징 블록 — 다음 섹션 전환 브리지
+   클로징 블록
 ══════════════════════════════════════════════════ */
 .recommend-closing {
   position: relative;
-  text-align: center;
-  overflow: hidden;
+  z-index: 1;
+  height: 800px;
 }
 
+.recommend-closing>.section-badge {
+  opacity: 0;
+}
 
 .recommend-closing__title {
-  font-family: var(--font-display);
+  position: relative;
+  z-index: 1;
+  /* font-family: var(--font-display); */
   font-size: 26px;
   font-weight: 700;
-  color: var(--c-ink);
+  color: var(--color-text);
   line-height: 1.45;
   margin-bottom: 16px;
 }
-.recommend-closing__img {
-  margin: 60px auto;
-}
 
-
-.recommend-closing__desc {
-  font-size: 14px;
-  color: var(--c-earth);
-  line-height: 1.8;
-  opacity: 0.75;
-}
-/* ══════════════════════════════════════════════════
-   ④ 마무리 카피
-══════════════════════════════════════════════════ */
-.intro-closing {
-  max-width: var(--max-width);
-  margin: 50px 0 0 0;
-  text-align: center;
+.full-CTA {
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 8px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-cta);
 }
 
-.intro-closing__text {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 5vw, 2rem);
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.6;
-}
-
-.intro-closing__sub {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  letter-spacing: 0.08em;
-  padding: 10px 20px;
-  border: 1px solid rgba(61,149,103,0.2);
-  border-radius: var(--radius-full);
-  background: rgba(61,149,103,0.04);
+.full-CTA>img {
+  width: 20px;
+  filter: invert(1);
 }
 
 /* ══════════════════════════════════════════════════
    반응형
 ══════════════════════════════════════════════════ */
-@media (min-width: 768px) {
-  .recommend-closing__title { font-size: 32px; }
+@media (max-width: 768px) {
+  .recommend-closing__title {
+    font-size: 22px;
+  }
 
+  .recommend-bg1 {
+    height: 100%;
+  }
+
+  .recommend-bg2 {
+    height: 100%;
+  }
 }
+
 @media (max-width: 450px) {
   .recommend-text {
-    font-size: 13px;
+    font-size: 12px;
+  }
+
+  .recommend-closing {
+    height: 500px;
   }
 }

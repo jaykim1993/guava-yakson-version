@@ -1,15 +1,14 @@
-.review-product__image {
-  border-radius: var(--radius-md);
-  width: 100%;
-  margin: 0 auto;
+.review-imgWrapper {
+  height: 380px;
   overflow: hidden;
-  /* aspect-ratio: 1 /1; */
-  box-shadow: var(--shadow-card);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  
 }
 
-.review-product__image > img {
-  width: 100%;
+.review-imgWrapper>img {
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+  width: 95%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -20,11 +19,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 28px;
-}
-
-.review-card {
-  border-left: 3px solid var(--color-accent);
+  width: 95%;
+  margin: 0 auto;
 }
 
 .review-header {
@@ -44,7 +40,7 @@
 .review-tag {
   font-size: 12px;
   color: var(--color-primary);
-  background: rgba(44,107,74,0.1);
+  background: rgba(44, 107, 74, 0.1);
   padding: 2px 8px;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -63,39 +59,41 @@
   color: var(--color-text-sub);
   line-height: 1.7;
 }
+
 .review-more {
   position: relative;
+  width: 95%;
+  margin: 0 auto;
   margin-top: 28px;
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0.95)
-  );
-  border: 1px solid rgba(0,0,0,0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: #eeeeeebb;
 }
 
 .review-more__overlay {
   text-align: center;
-  padding: 28px 20px;
-  backdrop-filter: blur(4px);
+  padding: 150px 20px;
 }
 
 .review-more__icon {
   margin-bottom: 10px;
 }
-.review-more__icon > img {
+
+.review-more__icon>img {
   width: 30px;
   display: block;
   margin: 0 auto;
   opacity: 0.7;
 }
+
 .review-more__text {
-  font-size: 14px;
+  font-size: 25px;
   color: var(--color-text-sub);
-  line-height: 1.6;
+  line-height: 2;
+  font-weight: 600;
   margin-bottom: 16px;
+  white-space: nowrap;
 }
 
 .review-more__btn {
@@ -105,8 +103,8 @@
   display: block;
   padding: 12px 16px;
   font-size: 14px;
-  font-weight: 700;
-  border-radius: 999px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
   border: none;
   background: var(--color-primary);
   color: #fff;
@@ -117,8 +115,18 @@
 .review-more__btn:hover {
   transform: translateY(-2px);
 }
+
 @media (max-width: 768px) {
-  .review-product__image{
+  .review-product__image {
     width: 100%;
+  }
+  .review-more__overlay{
+    padding: 100px 20px;
+  }
+  .review-more__text{
+    font-size: 13px;
+  }
+  .review-more__btn{
+    font-size: 12px;
   }
 }

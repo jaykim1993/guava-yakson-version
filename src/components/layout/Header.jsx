@@ -17,10 +17,7 @@ export default function Header() {
   // 1. 네비게이션 메뉴 데이터 (확장 내용 여기 추가)
   const navMenu = [
     { id: 1, label: "병원소개", target: "/about", show: true },
-    // { id: 2, label: "진료안내", target: "/treatments", show: true },
-    { id: 3, label: "후기", target: "/reviews", show: true },
-    // { id: 4, label: "오시는 길", target: "#location", show: true },
-    // { id: 5, label: "공지사항", target: "#notice", show: false },
+    { id: 2, label: "후기", target: "/reviews", show: true },
   ];
 
   // 2. 우측 액션 버튼 데이터
@@ -29,7 +26,7 @@ export default function Header() {
       label: "카카오 채널",
       url: "https://pf.kakao.com/_xlAzxkxb/chat",
       icon: <RiKakaoTalkFill />,
-      show: true
+      show: false
     },
     cta: {
       label: "간편접수",
@@ -56,10 +53,7 @@ export default function Header() {
 
   return (
     <>
-      <header
-        className=
-        {`${styles.header} ${scrolled && !menuOpen ? styles.scrolled : ""}`}
-      >
+      <header className= {styles.header}>
         <div className={styles.inner}>
           {/* 로고 영역 */}
           <Link to="/" className={styles.logo}>

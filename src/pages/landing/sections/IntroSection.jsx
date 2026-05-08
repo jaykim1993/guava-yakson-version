@@ -2,10 +2,10 @@ import { KakaoCTA, GoogleFormCTA, PhoneCTA } from '../../../components/cta/Butto
 import "./IntroSection.css";
 
 const CARDS = [
-  { icon: "./icons/shield-check.png", title: "식욕 억제", desc: "과식 충동을 자연스럽게 조절" },
-  { icon: "./icons/drop.png", title: "부종 감소", desc: "불필요한 수분 순환 개선" },
-  { icon: "./icons/thermometer.png", title: "신진대사 촉진", desc: "체지방 연소 효율 향상" },
-  { icon: "./icons/trend-down.png", title: "건강한 감량", desc: "급격한 단기 감량 지양" },
+  { title: "식욕 억제", desc: "과식 충동을 자연스럽게 조절" },
+  { title: "부종 감소", desc: "불필요한 수분 순환 개선" },
+  { title: "신진대사 촉진", desc: "체지방 연소 효율 향상" },
+  { title: "건강한 감량", desc: "급격한 단기 감량 지양" },
 ];
 
 const TRUST_STATS = [
@@ -16,104 +16,102 @@ const TRUST_STATS = [
 ];
 
 const POINTS = [
-  {
-    num: '01',
-    title: '전국 유일 코팅·착향 감비환',
-    desc: '독자 처방에 코팅·착향까지 적용된 유일한 감비환',
-    highlight: '쓴맛·냄새 걱정 없이 복용',
-  },
-  {
-    num: '02',
-    title: '압도적인 가성비',
-    desc: '부담 없는 가격으로 시작해 단계별 선택 가능',
-    highlight: '7만 9천원부터 시작',
-  },
-  {
-    num: '03',
-    title: '다년간의 임상 노하우',
-    desc: '5명의 한의사가 효과적인 다이어트에 대해 연구',
-    highlight: '최선의 다이어트 한약 처방',
-  },
-  {
-    num: '04',
-    title: '비대면 간편 상담',
-    desc: '방문 없이 상담부터 수령까지 한 번에',
-    highlight: '집에서 편리하게',
-  }
-]
+  { num: '01', title: '전국 유일 코팅·착향 감비환', desc: '독자 처방에 코팅·착향까지 적용된 유일한 감비환', highlight: '쓴맛·냄새 걱정 없이 복용' },
+  { num: '02', title: '압도적인 가성비', desc: '부담 없는 가격으로 시작해 단계별 선택 가능', highlight: '7만 9천원부터 시작' },
+  { num: '03', title: '다년간의 임상 노하우', desc: '5명의 한의사가 효과적인 다이어트에 대해 연구', highlight: '최선의 다이어트 한약 처방' },
+  { num: '04', title: '비대면 간편 상담', desc: '방문 없이 상담부터 수령까지 한 번에', highlight: '집에서 편리하게' },
+];
 
 export default function IntroSection() {
   return (
-    <section className="intro section">
-
-      <div className="intro-product__content">
-        <span className="intro-product__sub">Natural Diet Solution</span>
-        <h2 className="intro-product__title">
-          약손<br />감비환스틱
-        </h2>
-        <p className="intro-product__desc">
-          한약 특유의 냄새와 복용 부담을 줄이고<br />
-          상큼한 딸기향으로 맛있게, 간편하게
-        </p>
-      </div>
-      {/* ① 제품 등장 */}
-      <div className="intro-product__image">
-        {/* <img src="./gambihwan.png" alt="약손감비환스틱" /> */}
-        <img src="./약손감비환.png" alt="약손감비환스틱" />
-        <img src="./배너.png" alt="약손감비환스틱" />
-      </div>
-
-      {/* ② 핵심 기능 */}
-      <div className="intro-cards">
-        {CARDS.map(({ icon, title, desc }) => (
-          <div className="intro-card" key={title}>
-            <img className="intro-card__icon" src={icon}/>
-            <strong className="intro-card__title">{title}</strong>
-            <p className="intro-card__desc">{desc}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* ③ 신뢰 지표 */}
-      <div className="intro-trust">
-        <p className="intro-trust__label">많은 분들이 이미 선택했습니다</p>
-        <div className="intro-trust__stats">
-          {TRUST_STATS.map(({ num, label }) => (
-            <div className="intro-stat" key={label}>
-              <span className="intro-stat__num">{num}</span>
-              <span className="intro-stat__label">{label}</span>
+    <>
+      {/* ① 히어로 */}
+      <section className="section-wrap">
+        <img className="intro-bg" src="./bg/bg2.png" alt="" />
+        <div className="section-inner">
+          <div className=' intro-hero'>
+            <div className="intro-hero__text">
+              <div className="section-badge">
+                <b>·</b>&nbsp;천연 다이어트
+              </div>
+              <h2 className="section-title_intro">
+                약손<br />
+                <em>감비환스틱</em>
+              </h2>
+              <p className="intro-hero__desc">
+                한약 특유의 냄새와 복용 부담을 줄이고<br />
+                상큼한 딸기향으로 맛있게, 간편하게
+              </p>
             </div>
-          ))}
+
+            <div className="intro-hero__image">
+              <img src="./landing/감비환.png" alt="약손감비환스틱" />
+            </div>
+          </div>
+          <div className="intro-cards">
+            {CARDS.map(({ title, desc }) => (
+              <div className="intro-card" key={title}>
+                <strong className="intro-card__title">{title}</strong>
+                <p className="intro-card__desc">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="intro-product__image">
-        {/* <img src="./gambihwan.png" alt="약손감비환스틱" /> */}
-        <img src="./감비환스틱광고1.jpg" alt="약손감비환스틱" />
-      </div>
 
-      <div className="divider" />
-      <h2 className="section-title">
-        약손감비환이<br />
-        <em>특별한 4가지 이유</em>
-      </h2>
-      <div className="whyus-list">
-        {POINTS.map((p) => (
-          <div key={p.num} className="whyus-card card">
-            <span className="whyus-num">{p.num}</span>
-            <h3 className="whyus-title">{p.title}</h3>
-            <p className="whyus-desc">{p.desc}</p>
-            <div className="whyus-highlight">
-              <span>✦</span> {p.highlight}
+
+      </section>
+
+      {/* ② 신뢰 지표 */}
+      <section className="section-wrap">
+        <div className="section-inner">
+          <div className="intro-trust">
+            <p className="intro-trust__label">이미 많은 분들이 선택했습니다</p>
+            <div className="intro-trust__stats">
+              {TRUST_STATS.map(({ num, label }) => (
+                <div className="intro-stat" key={label}>
+                  <span className="intro-stat__num">{num}</span>
+                  <span className="intro-stat__label">{label}</span>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-      {/* CTA */}
-      <div className="ctas">
-        <KakaoCTA />
-        <GoogleFormCTA />
-      </div>
-    </section>
+      {/* ③ 특별한 4가지 이유 */}
+      <section className="section-wrap">
+        
+        <div className="section-inner whyus">
+          
+          <div className="whyus__left">
+            {/* <img src='./bg/bg3.png' /> */}
+            {/* <div className="section-badge"><b>·</b>&nbsp;천연 다이어트</div> */}
+            <h2 className="section-title whyus__title">
+              약손감비환이<br />
+              <em>특별한 4가지 이유</em>
+            </h2>
+            <div className="divider" />
+            <div className="ctas">
+              <KakaoCTA />
+              <GoogleFormCTA />
+              <PhoneCTA />
+            </div>
+          </div>
+
+          <div className="whyus__list">
+            {POINTS.map((p) => (
+              <div key={p.num} className="card">
+                <span className="whyus__num">{p.num}</span>
+                <h3 className="whyus__card-title">{p.title}</h3>
+                <p className="whyus__card-desc">{p.desc}</p>
+                <div className="whyus__highlight">
+                  <span>✦</span> {p.highlight}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

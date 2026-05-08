@@ -166,11 +166,9 @@
 }
 
 .philosophyCard {
-  background: var(--c-white);
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
-  border-top: 3px solid var(--c-moss);
+  border: 3px solid var(--color-bg-section);
 }
 
 .philosophyCard h3 {
@@ -272,66 +270,189 @@
    상담 CTA
 ══════════════════════════════════════════════════ */
 .ctaSection {
-  padding: 64px 10px 80px;
-  background: linear-gradient(160deg, var(--c-moss) 0%, #1a3d20 100%);
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.ctaSection::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(184, 147, 90, .18) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255, 255, 255, .04) 0%, transparent 60%);
-  pointer-events: none;
+  width: 100%;
+  padding: 80px 24px;
 }
 
 .ctaInner {
-  position: relative;
+  max-width: 800px;
   margin: 0 auto;
-  max-width: 720px;
-}
-
-.ctaEyebrow {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--c-gold);
-  margin-bottom: 16px;
-}
-
-.ctaTitle {
-  font-family: var(--ff-serif);
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--c-white);
-  line-height: 1.45;
-  margin-bottom: 12px;
-}
-
-.ctaTitle em {
-  font-style: normal;
-  color: var(--c-gold);
-}
-
-.ctaSub {
-  font-size: 14px;
-  color: rgba(255, 255, 255, .65);
-  line-height: 1.8;
-  margin-bottom: 36px;
-}
-
-.ctaButtons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
 }
 
+/* ── 헤딩 ── */
+.ctaHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaSteps {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-sub);
+  background: rgba(119, 68, 68, 0.06);
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+}
+
+.ctaArrow {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+/* ── 안내 박스 ── */
+.ctaNotice {
+  width: 100%;
+  background: var(--color-bg-section);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  padding: 24px 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ctaInner>b {
+  color: var(--color-text-sub);
+}
+
+.ctaNotice ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ctaNotice ul li {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+  position: relative;
+}
+
+
+/* ── 버튼 그룹 ── */
+.ctaButtons {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.ctaButtons a,
+.ctaButtons button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ── 마무리 문구 ── */
+.ctaClosing {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .ctaSection {
+    padding: 64px 32px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 48px 20px;
+  }
+
+  .ctaSteps {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaNotice {
+    padding: 20px 20px;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   병원 정보 + 지도 (기존 CSS 하단에 추가)
+══════════════════════════════════════════════════ */
+.infoInner {
+  width: 100%;
+  padding: 48px 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 100px;
+  /* background: var(--color-bg-section); */
+}
+
+.infoGroup h3 {
+  font-family: var(--ff-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-moss);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(74, 103, 65, .15);
+}
+
+.infoGroup ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoGroup li {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--c-earth);
+  line-height: 1.7;
+}
+
+.infoGroup li span {
+  flex-shrink: 0;
+  width: 48px;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.map>img {
+  width: 90%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map>img:hover {
+  transform: scale(1.02);
+}
 
 /* ══════════════════════════════════════════════════
    반응형
@@ -373,13 +494,21 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 400px) {
   .heroTitle {
-    font-size: 34px;
+    font-size: 30px;
+  }
+
+  .ctaInner>b {
+    display: none;
   }
 
   .ctaTitle {
     font-size: 30px;
+  }
+
+  .infoGroup li span {
+    width: 30px;
   }
 }
 
@@ -412,7 +541,7 @@
 }
 
 .photoOverlay>img {
-  width: 15%;
+  width: 8%;
   filter: brightness(0) invert(1);
 }
 
@@ -603,8 +732,16 @@
   }
 
   .lbArrow {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
+  }
+
+  .infoInner {
+    width: 100%;
+  }
+
+  .map>img {
+    width: 100%;
   }
 }

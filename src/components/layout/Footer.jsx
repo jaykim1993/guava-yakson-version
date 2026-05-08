@@ -6,21 +6,19 @@ export default function Footer() {
   const footerData = {
     hospital: {
       logo: "",
-      name: "약손한의원",
+      name: "용인약손한의원",
       show: true
     },
     details: [
-      { id: 1, label: "대표원장", value: "이관형", show: true },
+      { id: 1, label: "대표원장", value: "이관형", show: false },
       { id: 2, label: "사업자등록번호", value: "000-00-00000", show: false },
-      { id: 3, label: "주소", value: "경기도 용인시 처인구 금령로71번길 16 대흥빌딩 2층", show: true },
+      { id: 3, label: "주소", value: "경기도 용인시 처인구", show: true },
       { id: 4, label: "대표번호", value: "031-338-2299", show: true },
     ],
     businessHours: [
-      { id: 1, label: "진료시간(평일)", value: "09:00 – 20:30", show: true },
-      { id: 2, label: "진료시간(주말/공휴일)", value: "09:00 – 15:00", show: true },
-      { id: 3, label: "점심시간", value: "13:00 – 14:00", show: false },
-    ],
-    copy: "© 2026 약손한의원. All rights reserved."
+      { id: 1, label: "진료시간", value: "09:00 ~ 20:30 (평일·주말)", show: true },
+      { id: 2, label: "점심시간", value: "13:00 ~ 14:00", show: false },
+    ]
   };
 
   return (
@@ -39,26 +37,29 @@ export default function Footer() {
             .filter(item => item.show)
             .map((item, index) => (
               <span key={item.id} className={styles.infoItem}>
-                <strong>{item.label}</strong>: {item.value}
+                {item.value}
                 {index < footerData.details.filter(i => i.show).length - 1 && (
                   <span className={styles.divider}>|</span>
                 )}
               </span>
             ))}
-          </div>
-          <div className={styles.info}>
+        </div>
+        <div className={styles.info}>
           {footerData.businessHours
             .filter(item => item.show)
             .map((item, index) => (
               <span key={item.id} className={styles.infoItem}>
-                <strong>{item.label}</strong>: {item.value}
+                {item.label}: {item.value}
                 {index < footerData.businessHours.filter(i => i.show).length - 1 && (
                   <span className={styles.divider}>|</span>
                 )}
               </span>
             ))}
         </div>
-        <div className={styles.copy}>{footerData.copy}</div>
+        <div className={styles.copy}>
+          © 2026 약손한의원. All rights reserved.<br />
+          본 사이트의 정보는 의료 조언을 대체하지 않습니다.
+        </div>
       </div>
     </footer>
   );

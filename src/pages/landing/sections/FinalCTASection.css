@@ -1,106 +1,75 @@
-.finalcta {
+/* ============================================================
+   ClosingSection.css
+   ============================================================ */
+
+.closing-wrap {
   position: relative;
-  height: 100vh;
+  margin: 0 auto;
+  margin-top: 200px;
+  max-width: 1500px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  min-height: 480px;
 }
 
-.finalcta-bg {
+/* ── 배경 이미지 ── */
+.closing-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, var(--color-primary) 0%, #1a4a30 100%);
+  width: 1500px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   z-index: 0;
+  /* 우측에서 좌측으로 밝아지는 그라데이션 오버레이 */
+  mask-image: none;
 }
-
-.finalcta-bg::after {
+/* 좌측 하단 어둡게 — 텍스트 가독성 */
+.closing-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(232,168,56,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 90%, rgba(255,255,255,0.05) 0%, transparent 60%);
-}
-
-.finalcta-content {
-  position: relative;
   z-index: 1;
-  padding-top: 64px;
-  padding-bottom: 80px;
-  text-align: center;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    transparent 100%
+  );
+}
+/* ── 텍스트 ── */
+.closing-inner {
+  position: absolute;
+  z-index: 2;
+  bottom: 12%;
+  left: 6%;
 }
 
-.finalcta-label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-accent-warm);
-  margin-bottom: 16px;
-}
-
-.finalcta-headline {
-  font-family: var(--font-display);
-  font-size: 30px;
+.closing-title {
+  font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 700;
-  line-height: 1.4;
-  color: var(--color-white);
-  margin-bottom: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75);
 }
 
-.finalcta-headline em {
+.closing-title em {
   font-style: normal;
+  font-size: clamp(32px, 3.5vw, 46px);
   color: var(--color-accent-warm);
 }
 
-.finalcta-sub {
-  font-size: 14px;
-  color: rgba(255,255,255,0.72);
-  line-height: 1.7;
-  margin-bottom: 36px;
-}
-
-.finalcta-trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin: 40px 0;
-}
-
-.finalcta-trust span {
-  font-size: 12px;
-  color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.1);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-}
-
-.finalcta-info {
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  padding-top: 24px;
-}
-
-.finalcta-info p {
-  font-size: 13px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.8;
-}
-
-.finalcta-info strong {
-  color: rgba(255,255,255,0.85);
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  .finalcta-headline { font-size: 38px; }
-  .finalcta-buttons {
-    flex-direction: row;
-    justify-content: center;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+/* ── 반응형 ── */
+@media (max-width: 768px) {
+  .closing-wrap {
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    min-height: 360px;
+    margin-top: 100px;
   }
-  .finalcta-btn-kakao, .finalcta-btn-phone {
-    width: auto;
-    flex: 1;
+
+  .closing-inner {
+    bottom: 8%;
+    left: 5%;
   }
 }

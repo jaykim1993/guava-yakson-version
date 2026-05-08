@@ -3,23 +3,23 @@ import { KakaoCTA, GoogleFormCTA, PhoneCTA } from "../../components/cta/ButtonCT
 import styles from "./AboutPage.module.css";
 
 const PHILOSOPHY = [
-  { title: "근본 치료",   desc: "증상이 아닌 원인을 찾아 치료합니다. 표면적인 증상 완화에 그치지 않습니다." },
-  { title: "1:1 맞춤",   desc: "같은 병명이라도 체질과 생활 환경이 다르면 처방이 달라야 합니다." },
+  { title: "근본 치료", desc: "증상이 아닌 원인을 찾아 치료합니다. 표면적인 증상 완화에 그치지 않습니다." },
+  { title: "1:1 맞춤", desc: "같은 병명이라도 체질과 생활 환경이 다르면 처방이 달라야 합니다." },
   { title: "과학적 접근", desc: "전통 한방 이론에 최신 임상 데이터를 접목해 처방합니다." },
   { title: "투명한 소통", desc: "치료 과정과 예상 기간을 솔직하게 안내드립니다." },
 ];
 
 const UNDERSTAND = [
-  { title: "바쁜 일상 속 지친 몸",      desc: "직장·육아·가사로 자신을 돌볼 여유가 없는 분들의 어려움을 잘 알고 있습니다." },
-  { title: "병원이 부담스럽던 경험",    desc: "긴 대기, 짧은 진료, 이해하기 어려운 설명. 저희는 다릅니다." },
+  { title: "바쁜 일상 속 지친 몸", desc: "직장·육아·가사로 자신을 돌볼 여유가 없는 분들의 어려움을 잘 알고 있습니다." },
+  { title: "병원이 부담스럽던 경험", desc: "긴 대기, 짧은 진료, 이해하기 어려운 설명. 저희는 다릅니다." },
   { title: "빠른 효과보다 안전한 방법", desc: "무리한 감량 대신 몸이 받아들일 수 있는 속도로 함께 갑니다." },
-  { title: "비용이 걱정되는 마음",      desc: "합리적인 비용으로 지속 가능한 치료를 설계합니다." },
+  { title: "비용이 걱정되는 마음", desc: "합리적인 비용으로 지속 가능한 치료를 설계합니다." },
 ];
 
 const PHOTOS = [
   { label: "2", wide: false },
   { label: "4", wide: false },
-  { label: "1", wide: true  },
+  { label: "1", wide: true },
   { label: "3", wide: false },
   { label: "5", wide: false },
 ];
@@ -36,9 +36,9 @@ function Lightbox({ photos, startIndex, onClose }) {
   // 키보드 이벤트
   useEffect(() => {
     const handler = (e) => {
-      if (e.key === "ArrowLeft")  prev();
+      if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
-      if (e.key === "Escape")     onClose();
+      if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
@@ -116,7 +116,7 @@ export default function AboutPage() {
       <section className={styles.doctorSection}>
         <div className={styles.doctorGrid}>
           <div className={styles.profileContainer}>
-            <img className={styles.profile} src="./profile.png" alt="이관형 원장" />
+            <img className={styles.profile} src="./about/profile.png" alt="이관형 원장" />
           </div>
           <div>
             <p className={styles.doctorEyebrow}>대표원장</p>
@@ -125,12 +125,6 @@ export default function AboutPage() {
               "환자 한분 한분의 말씀에 귀 기울이고,<br />
               바른 진료와 좋은 한약재로 정직한 치료를 이어가겠습니다."
             </blockquote>
-            <ul className={styles.doctorCareer}>
-              <li>OO대학교 한의과대학 졸업</li>
-              <li>OO의료원 한방병원 전공의 수료</li>
-              <li>OO의학회 정회원</li>
-              <li>임상경력 25년차, 누적 진료 환자 6만 명</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -188,9 +182,9 @@ export default function AboutPage() {
                 onKeyDown={(e) => e.key === "Enter" && setLightboxIndex(idx)}
                 aria-label={`한의원 사진 ${idx + 1} 크게 보기`}
               >
-                <img src={`./${label}.jpg`} alt={`한의원 사진 ${idx + 1}`} />
+                <img src={`./about/${label}.jpg`} alt={`한의원 사진 ${idx + 1}`} />
                 <div className={styles.photoOverlay}>
-                  <img src="./icons/magnifying-glass.png"/>
+                  <img src="./icons/magnifying-glass.png" />
                 </div>
               </div>
             ))}
@@ -201,20 +195,37 @@ export default function AboutPage() {
       {/* ⑥ 상담 CTA */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaInner}>
-          <p className={styles.ctaEyebrow}>지금 바로 시작하세요</p>
-          <h2 className={styles.ctaTitle}>
-            궁금한 점은<br />
-            <em>편하게 물어보세요</em>
-          </h2>
-          <p className={styles.ctaSub}>
-            비대면 상담 가능 · 오전 9시 ~ 오후 7시<br />
-            접수 후 빠르게 연락드립니다
-          </p>
-          <div className="ctas">
-            <KakaoCTA />
+
+          {/* 상단 헤딩 */}
+          <div className={styles.ctaHead}>
+            <h2 className="section-title">비대면 진료 순서 안내</h2>
+            <div className={styles.ctaSteps}>
+              <span>1. 설문지 작성</span>
+              <span className={styles.ctaArrow}>→</span>
+              <span>2. 비대면 상담</span>
+              <span className={styles.ctaArrow}>→</span>
+              <span>3. 택배 처방</span>
+            </div>
+          </div>
+
+          {/* 안내 박스 */}
+          <div className={styles.ctaNotice}>
+            <ul>
+              <li>- <b>안전한 감량</b>을 위해 무분별한 처방은 하지 않습니다.</li>
+              <li>- 설문 및 진료 결과에 따라 처방이 <b>제한</b>될 수 있습니다.</li>
+              <li>- 꼼꼼히 작성 주시면 면밀히 분석 후 연락드립니다.</li>
+            </ul>
+          </div>
+
+          {/* CTA 버튼 */}
+          <div className={styles.ctaButtons}>
             <GoogleFormCTA />
+            <KakaoCTA />
             <PhoneCTA />
           </div>
+          <b>
+            건강하게 지속가능한 다이어트 하실 수 있도록 꼼꼼하게 상담하겠습니다
+          </b>
         </div>
       </section>
 
@@ -226,6 +237,35 @@ export default function AboutPage() {
           onClose={() => setLightboxIndex(null)}
         />
       )}
+
+      <div className={styles.infoInner}>
+        <h2 className="section-title">찾아오시는 길</h2>
+        <a
+          className={styles.map}
+          href="https://map.naver.com/p/search/%EC%9A%A9%EC%9D%B8%EC%95%BD%EC%86%90%ED%95%9C%EC%9D%98%EC%9B%90/place/13230592?c=18.30,0,0,0,dh&placePath=/home?bk_query=%EC%9A%A9%EC%9D%B8%EC%95%BD%EC%86%90%ED%95%9C%EC%9D%98%EC%9B%90&entry=bmp&from=map&fromPanelNum=2&timestamp=202605070959&locale=ko&svcName=map_pcv5&searchText=%EC%9A%A9%EC%9D%B8%EC%95%BD%EC%86%90%ED%95%9C%EC%9D%98%EC%9B%90"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./about/지도.PNG"
+            alt="용인약손한의원 위치"
+          />
+        </a>
+        <div className={styles.infoGroup}>
+          <ul>
+            <li><span>주소</span>: 경기도 용인시 처인구 금령로71번길 16 대흥빌딩 2층</li>
+            <li><span>TEL</span>: 031-338-2299</li>
+          </ul>
+        </div>
+
+        <div className={styles.infoGroup}>
+          <h3>주차 안내</h3>
+          <ul>
+            <li>건물 뒤편에 1층 대형주차장이 있습니다.</li>
+            <li>* 5/10일은 장날이어서 주차장이 혼잡하오니 참고 바랍니다.</li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   );

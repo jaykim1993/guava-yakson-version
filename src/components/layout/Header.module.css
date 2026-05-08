@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 80px;
-    background: var(--color-white);
+    background: transparent;
     transition: all 0.3s ease;
     z-index: 1000;
     display: flex;
@@ -12,11 +12,24 @@
     padding: 0 10px;
 }
 
-/* 스크롤 시 적용될 스타일 */
-.scrolled {
-    background: var(--color-white);
-    height: 70px;
-    box-shadow: var(--shadow-cta);
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    /* 헤더보다 길게 */
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.99) 10%,
+            rgba(255, 255, 255, 0.95) 20%,
+            rgba(255, 255, 255, 0.85) 35%,
+            rgba(255, 255, 255, 0.6) 55%,
+            rgba(255, 255, 255, 0.25) 75%,
+            rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .inner {
@@ -34,8 +47,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
-    color: var(--color-primary);
-    font-family: var(--font-display);
+    color: #774444;
     font-weight: 800;
     font-size: 22px;
     white-space: nowrap;
@@ -142,22 +154,26 @@
 /* --- 2. 모바일 전용 메뉴판 스타일 --- */
 .mobileMenu {
     position: fixed;
-    top: -100px;
+    top: -200px;
     left: 0;
     width: 100%;
-    height: fit-content;
-    background: var(--color-primary);
-    color: var(--color-white);
+    height: 235px;
+    background: linear-gradient(to bottom,
+            rgb(255, 255, 255) 60%,
+            transparent 100%);
+    color: #774444;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 16px;
     padding: 20px;
+    padding-bottom: 100px;
     transition: transform 0.3s ease;
     z-index: 100;
 }
 
 .mobileMenuOpen {
-    transform: translateY(150%);
+    transform: translateY(90%);
 }
 
 .mobileMenu>.navLink {
@@ -168,17 +184,19 @@
     text-align: center;
     padding: 0;
 }
-@media (max-width: 950px) {
 
-}
+@media (max-width: 950px) {}
+
 /* --- 3. 반응형 대응 (768px 이하) --- */
 @media (max-width: 768px) {
     .header {
         height: 60px;
     }
-    .scrolled{
+
+    .scrolled {
         height: 50px;
     }
+
     /* PC 네비게이션 숨기기 */
     .inner {
         justify-content: space-between;

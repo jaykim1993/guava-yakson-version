@@ -8,60 +8,76 @@ const ICON_STYLE = {
 };
 
 const TARGETS = [
-  { icon: "Scales",          text: '붓기·체중감량 고민 있으신 30~60대 여성분' },
-  { icon: "Pill",            text: '한약이 쓰고 냄새날까봐 걱정되셨던 분' },
-  { icon: "CurrencyKrw",    text: '비싼 다이어트 한약이 부담스러웠던 분' },
-  { icon: "ArrowsClockwise", text: '다른 한의원 감비환 효과가 없었던 분' },
-  { icon: "Package",         text: '직접 방문수령 대신 비대면으로 받고 싶은 분' },
+  { icon: "Scales", bold: '20대~40대', text: '과체중 여성분' },
+  { icon: "Pill", bold: '한약이 쓰고 냄세날까봐', text: '걱정되셨던 분' },
+  { icon: "CurrencyKrw", bold: '비싼 다이어트 한약이', text: '부담스러웠던 분' },
+  { icon: "ArrowsClockwise", bold: '다른 한의원 감비환', text: '효과가 없었던 분' },
+  { icon: "Package", bold: '직접 방문하기 어려워', text: '비대면으로 받고 싶은 분' },
 ];
 
 export default function RecommendSection() {
   return (
-    <section className="recommend section">
-      <div className="recommend-inner">
-
-        <h2 className="section-title">
-          "혹시 이런 고민<br />
-          요즘 자주 하시나요?"
-        </h2>
-        <div className="divider" />
-
-        <ul className="recommend-list">
-          {TARGETS.map((target) => {
-            const Icon = getIcon(target.icon);
-            return (
-              <li key={target.icon} className="recommend-item">
-                <span className="recommend-icon">
-                  {Icon && <Icon {...ICON_STYLE} />}
-                </span>
-                <span className="recommend-text">{target.text}</span>
-                <span className="recommend-check">✓</span>
-              </li>
-            );
-          })}
-        </ul>
-
-        {/* 클로징 */}
-        <div className="recommend-closing">
-          <span className="recommend-closing__line" aria-hidden="true" />
-          <h2 className="recommend-closing__title">
-            혼자 고민하지 마세요<br />
-            저희가 함께하겠습니다
+    <>
+      {/* ① 질문 + 리스트 */}
+      <section className="section-wrap">
+        <img className="recommend-bg1" src="./bg/bg2.png" />
+        <div className="section-inner">
+          <div className="section-badge"><b>·</b>&nbsp;추천대상</div>
+          <h2 className="section-title">
+            혹시 이런 고민<br />
+            <em>요즘 자주 하시나요?</em>
           </h2>
-          <img className="recommend-closing__img" src="./홍보.png"/>
+          <div className="divider" />
+
+          <ul className="recommend-list">
+            {TARGETS.map((target) => {
+              const Icon = getIcon(target.icon);
+              return (
+                <li key={target.icon} className="recommend-item">
+                  <span className="recommend-icon">
+                    {Icon && <Icon {...ICON_STYLE} />}
+                  </span>
+                  <span className="recommend-text"><b>{target.bold}</b>&nbsp;{target.text}</span>
+                  <span className="recommend-check">✓</span>
+                </li>
+              );
+            })}
+          </ul>
+          <a
+            href="https://pf.kakao.com/_xlAzxkxb/chat"
+            className="full-CTA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./icons/chat-circle-dots.png" />
+            나에게 맞는지 무료 상담하기
+          </a>
         </div>
-      {/* ④ 마무리 카피 */}
-      <div className="intro-closing">
-        <p className="intro-closing__text">
-          이제 다이어트할 때마다<br />
-          한약 냄새 걱정은 끝!
-        </p>
-        
-        <span className="intro-closing__sub">
-          더욱 맛있게 · 간편하게 · 효과있게
-        </span>
-      </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ② 클로징 */}
+      <section className="section-wrap">
+        <img className="recommend-bg2" src='./bg/bg3.png' />
+        <div className="section-inner">
+          <div className="recommend-closing">
+            <div className="section-badge"><b>·</b>&nbsp;천연 다이어트</div>
+            <h2 className="section-title">
+              혼자 고민하지 마세요<br />
+              <em>저희가 함께하겠습니다</em>
+            </h2>
+          </div>
+          <a
+            href="https://pf.kakao.com/_xlAzxkxb/chat"
+            className="full-CTA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./icons/chat-circle-dots.png" />
+            나에게 맞는지 무료 상담하기
+          </a>
+
+        </div>
+      </section>
+    </>
   );
 }
