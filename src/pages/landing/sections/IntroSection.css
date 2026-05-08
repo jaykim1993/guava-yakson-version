@@ -192,7 +192,7 @@
   width: 50%;
   /* 화면 절반 */
   height: 100%;
-  background-image: url('./bg/bg3.png');
+  background-image: url('/bg/bg3.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
