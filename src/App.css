@@ -1,7 +1,7 @@
 /* ─── Brand Tokens ─────────────────────────────────────────────────── */
 :root {
   --color-primary: #774444;
-  --color-primary-light: #5ab785;
+  --color-primary-light: rgba(90, 183, 133, 0.705);
   --color-accent: #774444b9;
   --color-accent-warm: #f2c36d;
   --color-bg: #FAFAF7;
