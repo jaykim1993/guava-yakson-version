@@ -365,7 +365,6 @@
   .boardText {
     max-width: 100%;
     white-space: normal;
-    /* 말줄임 해제 */
     overflow: visible;
     text-overflow: unset;
   }

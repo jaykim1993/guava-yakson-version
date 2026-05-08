@@ -21,10 +21,9 @@
   object-fit: cover;
   object-position: center top;
   z-index: 0;
-  /* 우측에서 좌측으로 밝아지는 그라데이션 오버레이 */
   mask-image: none;
 }
-/* 좌측 하단 어둡게 — 텍스트 가독성 */
+
 .closing-wrap::after {
   content: '';
   position: absolute;
