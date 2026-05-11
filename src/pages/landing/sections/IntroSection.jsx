@@ -12,7 +12,7 @@ const TRUST_STATS = [
   { num: "10만+", label: "누적 처방 건수" },
   { num: "딸기향", label: "천연 코팅 착향" },
   { num: "3종", label: "동봉 구성품" },
-  { num: "무부담", label: "부드러운 목넘김" },
+  { num: "부담 ZERO", label: "부드러운 목넘김" },
 ];
 
 const POINTS = [

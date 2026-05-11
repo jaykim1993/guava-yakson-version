@@ -9,7 +9,7 @@ const ICON_STYLE = {
 
 const TARGETS = [
   { icon: "Scales", bold: '20대~40대', text: '과체중 여성분' },
-  { icon: "Pill", bold: '한약이 쓰고 냄세날까봐', text: '걱정되셨던 분' },
+  { icon: "Pill", bold: '한약이 쓰고 냄새날까봐', text: '걱정되셨던 분' },
   { icon: "CurrencyKrw", bold: '비싼 다이어트 한약이', text: '부담스러웠던 분' },
   { icon: "ArrowsClockwise", bold: '다른 한의원 감비환', text: '효과가 없었던 분' },
   { icon: "Package", bold: '직접 방문하기 어려워', text: '비대면으로 받고 싶은 분' },
