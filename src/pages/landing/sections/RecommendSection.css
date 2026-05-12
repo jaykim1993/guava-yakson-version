@@ -161,6 +161,10 @@
     font-size: 12px;
   }
 
+  .recommend-bg2 {
+    object-position: 45%;
+  }
+
   .recommend-closing {
     height: 500px;
   }

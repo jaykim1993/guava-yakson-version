@@ -1,8 +1,8 @@
 .footer {
   background-color: #774444;
-  padding: 20px 10px;
+  padding: 40px 10px 30px;
   color: var(--text-gray);
-  font-size: 15px
+  font-size: 15px;
 }
 
 .inner {
@@ -24,7 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   line-height: 1.8;
-  color: #ffffff70;
+  color: #ffffffcc;
 }
 
 .infoItem {
@@ -35,25 +35,58 @@
 
 .divider {
   margin: 0 10px;
-  color: var(--border-gray);
+  color: #ffffffcc;
   font-size: 12px;
 }
 
 .copy {
-  font-size: 15px;
-  color: #999;
-  text-align: right;
-  margin-top: 30px;
-  padding: 10px;
-  /* border-top: 1px solid var(--border-gray); */
+  font-size: 13px;
+  text-align: left;
+  color: #ffffffaa;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff30;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
-  .info {
+  .footer {
+    padding: 30px 16px 20px;
     font-size: 13px;
-     line-height: 1.5;
   }
-  .copy {
+
+  .hospital {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .info {
     font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .infoItem {
+    font-size: 12px;
+  }
+
+  .copy {
+    font-size: 11px;
+    margin-top: 16px;
+    padding-top: 12px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital {
+    font-size: 14px;
+  }
+
+  .info {
+    font-size: 11px;
+  }
+
+  .copy {
+    font-size: 10px;
   }
 }
