@@ -12,7 +12,7 @@ export default function FinalCTASection() {
       <div className="closing-inner">
         <h2 className="closing-title">
           다시 입고 싶은<br />
-          그 옷을 위한<br />
+          <em>그 옷</em>을 위한<br />
           <em>약손 감비환스틱</em>
         </h2>
       </div>

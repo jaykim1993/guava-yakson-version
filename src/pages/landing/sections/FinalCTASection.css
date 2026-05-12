@@ -47,7 +47,7 @@
 .closing-title {
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 700;
-  color: #ffffff;
+  color: #E9DCB3;
   line-height: 1.5;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75);
 }
@@ -55,7 +55,7 @@
 .closing-title em {
   font-style: normal;
   font-size: clamp(32px, 3.5vw, 46px);
-  color: var(--color-accent-warm);
+  color: #FFFFFF;
 }
 
 /* ── 반응형 ── */
