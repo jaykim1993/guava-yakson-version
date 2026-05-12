@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용인약손한의원 랜딩페이지 및 풀 홈페이지 디자이너 전달용 문서 V2</title>
+    <style>
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 80px;
+        position: relative;
+        box-sizing: border-box;
+        font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif;
+        color: #333333;
+        line-height: 1.6;
+        background-color: #ffffff;
+      }
+      h1 {
+        font-size: 28px;
+        color: #000000;
+        border-bottom: 2px solid #333333;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 20px;
+        color: #111111;
+        margin-top: 40px;
+        margin-bottom: 16px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #cccccc;
+      }
+      h3 {
+        font-size: 16px;
+        color: #333333;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+      p,
+      li {
+        font-size: 14px;
+        color: #444444;
+      }
+      ul,
+      ol {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+      th,
+      td {
+        border: 1px solid #cccccc;
+        padding: 10px 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+        color: #333333;
+        font-weight: bold;
+      }
+      .highlight-box {
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        padding: 16px 20px;
+        margin: 20px 0;
+      }
+      .warning-box {
+        background-color: #f0f0f0;
+        border-left: 4px solid #666666;
+        padding: 16px 20px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      blockquote {
+        margin: 20px 0;
+        padding: 16px 20px;
+        background-color: #f5f5f5;
+        border-left: 4px solid #999999;
+        font-style: normal;
+        color: #555555;
+      }
+      a {
+        color: #333333;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body style="">
+    <h1>용인약손한의원 랜딩페이지 및 용인약손한의원/ 지아한의원 풀 홈페이지 기획 전달용 문서</h1>
+
+    <div class="highlight-box">
+      <p><strong>버전:</strong> 04.21</p>
+      <p>
+        <strong>작성 목적:</strong> GUAVA의 한의원 AI 홈페이지 기획안을 기반으로,&nbsp;</p><p>용인약손한의원에 우선 적용할 다이어트
+        랜딩페이지와 이후 풀 홈페이지 확장 방향을 디자이너/ 프론트 개발자가 빠르게 이해하도록 정리하는 전달용
+        문서입니다.</p>
+      <p><strong>대상:</strong>&nbsp;프론트 개발 / 내부 기획 공유</p>
+      <p><strong>프로젝트 일정 요약:</strong> 랜딩페이지 1주 이내, 풀 홈페이지 1개월 이내</p>
+    </div>
+
+    <h2>2. 요약</h2>
+    <ul>
+      <li>본 프로젝트는 단순 웹사이트 제작이 아닌, 전환 최적화 및 운영 자동화를 위한 통합 솔루션 (GUAVA 플랫폼의 일환) 구축입니다.</li>
+      <li>
+        1차 과제인 랜딩페이지는 광고 및 SNS(인스타) 유입 사용자의 빠른 판단과 상담 전환을 위한 모바일 세일즈 최적화
+        구조로 설계합니다.
+      </li>
+      <li>
+        2차 과제인 풀 홈페이지는 GUAVA의 정보 구조를 반영하여, 유입(광고/블로그/CRM)별 첫 화면이 개인화되는 컴포넌트 조립형 제품입니다.
+      </li>
+      <li>
+        랜딩은 '약손감비환'을 중심 주제로 하여 신뢰 기반의 상담 유도형 톤앤매너를 유지합니다.
+      </li>
+      <li>추후 병원별로 유연하게(세그먼트화) 조립 가능한 플랫폼을
+        목표로 합니다.
+      </li>
+    </ul>
+
+    <h2>3. 프로젝트 개요</h2>
+    <p>
+      <strong>프로젝트 배경:</strong> GUAVA 플랫폼이 한의원 고객에게 제공할 AI 기반 홈페이지 자동화 기능의 실증 및 첫
+      도입 사례 구축입니다.<br>
+      <strong><br></strong></p><p><strong>용인약손한의원 랜딩페이지 우선 적용:</strong> 다이어트라는 명확한 타깃과 전환 목표가 존재하며, 기존 블로그
+      콘텐츠를 통한 정보 자산이 확보되어 있어 적합합니다.&nbsp;</p><p><strong>단계별 접근:</strong> 1단계에서는 빠른 광고 성과를 위해 다이어트 단일 랜딩페이지(프론트 중심)를 구축하며,
+      2단계에서는 플랫폼 기능과 컴포넌트화가 결합된 조립형 풀 홈페이지로 확장합니다. 랜딩페이지의 경우, 영상화과정을 거쳐 풀 홈페이지의 한 섹션에서 광고배너 영역으로 동작합니다.</p>
+
+    <h2>4. 작업 범위 및 일정</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>목표 및 성격</th>
+          <th>대상 사용자</th>
+          <th>핵심 CTA</th>
+          <th>핵심 산출물</th>
+          <th>일정</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1차: 랜딩페이지</strong></td>
+          <td>다이어트(약손감비환) 단일 전환형 모바일 랜딩</td>
+          <td>광고/SNS 유입 (인내심이 짧음)</td>
+          <td>카카오 문의 / 접수폼</td>
+          <td>모바일 중심 세일즈 화면, 컴포넌트 디자인</td>
+          <td>1주 이내</td>
+        </tr>
+        <tr>
+          <td><strong>2차: 풀 홈페이지</strong></td>
+          <td>GUAVA 구조 기반의 개인화, 조립형 플랫폼</td>
+          <td>광고 / 블로그 / CRM 유입 전체</td>
+          <td>예약 / 전화 / 카톡</td>
+          <td>9개 Zone IA 구조, 유입별 프리셋, 컴포넌트 라이브러리</td>
+          <td>1개월 이내</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. 브랜드 및 서비스 이해</h2>
+    <p>
+      용인약손한의원은 "가성비와 효율적인 다이어트", "빨리보다 안전하게, 꾸준히"를 진료 철학으로 삼고 있습니다.&nbsp;</p>
+    <ul>
+      <li><strong>중심 메시지:</strong> 다시 입고 싶은 그 옷을 위한 약손 감비환스틱</li>
+      <li>
+        <strong>핵심 포인트 (블로그 기반):</strong>&nbsp;1) 체지방 감소 2) 식욕 억제 3) 부종 감소 4) 신진대사 촉진 5) 건강한
+        다이어트 지향 6) 무리한 단기 감량 지양</li>
+      <li>
+        <strong>마케팅 소구점:</strong> 위 효능을 의학적/과장형으로 나열하지 않고, 고객의 고민을 해결하는 "사용자 언어 및
+        상담형 언어"로 순화하여 표기합니다.
+      </li>
+    </ul>
+
+    <h2>6. 레퍼런스 분석: mail100diet.com</h2>
+
+    <h3>6-1. 모바일 세일즈 랜딩 구조의 특징</h3>
+    <p>
+      모바일 중심의 세로형 읽기 구조로, 사용자가 스크롤을 내릴 때마다 의문을 해소하며 전환으로 유도하는 완결성 있는
+      구성을 가집니다.
+    </p>
+
+    <h3>6-2. 타깃 명확화 방식</h3>
+    <p>페이지 진입 즉시 '누구를 위한 약인지' 명시하여 이탈을 방지하고 공감대를 형성합니다.</p>
+
+    <h3>6-3. 소개 섹션이 수행하는 역할</h3>
+    <p>
+      기능의 나열이 아니라, "왜 기존 다이어트가 실패했는지", "이 방식은 왜 다른지"를 설명하는 문제 해결 프레임으로
+      작동합니다.
+    </p>
+
+    <h3>6-4. 후기 섹션이 수행하는 역할</h3>
+    <p>소개 섹션에서 발생한 사용자의 의구심을 실사례를 통해 즉각적으로 해소하며 신뢰를 보강합니다.</p>
+
+    <h3>6-5. FAQ/가격/CTA 배치 방식</h3>
+    <p>
+      FAQ와 가격을 숨기지 않고 전면에 배치하여 투명성을 높이고, CTA를 각 논리적 단락 끝마다 반복 배치하여 전환율을
+      극대화합니다.
+    </p>
+
+    <h3>6-6. 용인약손에 적용 시 가져와야 할 점 / 버려야 할 점</h3>
+    <p>
+      <strong>가져올 점:</strong> 세로형 모바일 최적화, FAQ 전면 배치, 반복적인 CTA, 고객 문제 중심의 카피 전개.&nbsp;</p><p><strong>제작시 주의점 :</strong> 지나치게 자극적이거나 과장된 카피. 용인약손은 한의원 특유의 '신뢰'와 '안전성'을 더
+      강조해야 합니다.
+    </p>
+
+    <h2>7. 용인약손 로컬라이징 방향</h2>
+    <ul>
+      <li>
+        <strong>톤앤매너:</strong> 자극적인 뷰티/다이어트 커머스 스타일을 배제하고, '여성 웰니스 + 한의원의 신뢰감 +
+        상담 유도형' 톤으로 디자인합니다.
+      </li>
+      <li>
+        <strong>비주얼 대체 (추후 영상화시):</strong> 원장 실사 사용을 원치 않으므로, 신뢰감을 주는 AI 의사 이미지 또는 세련된 대체
+        비주얼(그래픽/일러스트/제품컷)을 활용합니다.
+      </li>
+      <li><strong>표현 정제:</strong> 블로그 원문 등에 있는 '마법' 같은 과장 홍보 문구는 전면 제외합니다.</li>
+      <li>
+        <strong>콘텐츠 재해석:</strong> 블로그의 딱딱한 정보성 글을 랜딩페이지 문맥에 맞게 감성적/설득적 카피로
+        변환합니다.
+      </li>
+    </ul>
+
+    <h2>8. <span style="color: rgb(225, 83, 76);">랜딩페이지</span> 정보 구조 및 섹션별 디렉션</h2>
+    <ol>
+      <li>
+        <strong>8-1. Hero:</strong> <br>
+        - 목적: 이탈 방지 및 타깃 확인<br>
+        - 메시지: "다시 입고 싶은 그 옷을 위한 약손감비환스틱"<br>
+        - 디자인: 메인 카피와 즉각적인 CTA(카카오 문의). 직관적이고 깔끔한 배경.
+      </li>
+      <li>
+        <strong>8-2. 공감형 문제 제시:</strong> <br>
+        - 목적: 타깃의 고통 공감<br>
+        - 메시지: 붓기, 반복되는 요요, 식욕 조절 실패 등<br>
+        - 디자인: 체크리스트 폼 또는 질문형 카드.
+      </li>
+      <li>
+        <strong>8-3. 소개 섹션 (약손 방식 소개):</strong> <br>
+        - 목적: 솔루션 제시<br>
+        - 메시지: 식욕 관리, 붓기 케어, 일상 속 꾸준한 관리<br>
+        - 디자인: 아이콘이 포함된 4구 카드 레이아웃.
+      </li>
+      <li>
+        <strong>8-4. 신뢰/가이드 섹션:</strong> <br>
+        - 목적: 병원의 철학 어필 및 과장 광고 탈피<br>
+        - 메시지: 무리한 감량보다 건강한 다이어트 지향<br>
+        - 디자인: 차분한 배경의 텍스트 박스.
+      </li>
+      <li>
+        <strong>8-5. 후기 섹션:</strong> <br>
+        - 목적: 의심 해소<br>
+        - 메시지: 상담이 꼼꼼하다, 부담 없이 시작했다 등의 정성적 리뷰<br>
+        - 디자인: 스와이프 가능한 짧은 카드형 및 1~2개의 상세 스토리 블록.
+      </li>
+      <li>
+        <strong>8-6. FAQ 섹션:</strong> <br>
+        - 목적: 최종 전환 저항 해소<br>
+        - 메시지: 부작용, 복용법, 요요 관리 등<br>
+        - 디자인: 아코디언 메뉴 형태.
+      </li>
+      <li>
+        <strong>8-7. 보조환/구성 소개:</strong> <br>
+        - 목적: 추가 관리 방안 안내 (서브)<br>
+        - 메시지: 디톡스환, 폭식환 등 맞춤형 보조환<br>
+        - 디자인: 시선을 뺏지 않는 작은 서브 카드.
+      </li>
+      <li>
+        <strong>8-8. 최종 CTA 섹션:</strong> <br>
+        - 목적: 폼 작성 및 채널 톡 유입<br>
+        - 메시지: "지금 바로 상담받고 가볍게 시작하세요"<br>
+        - 디자인: 화면 하단 고정바 및 명확한 버튼 컨테이너.
+      </li>
+    </ol>
+
+    <h2>9. <span style="color: rgb(225, 83, 76);">소개</span> 섹션 가이드</h2>
+    <p>레퍼런스의 기능 중심 소개를 약손의 고객 언어로 변환합니다.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>블로그 원문</th>
+          <th>랜딩용 번역</th>
+          <th>화면 노출 방식</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>식욕 억제</td>
+          <td>자꾸 무너지는 식욕, 가볍게 관리하세요</td>
+          <td>아이콘 + 텍스트 카드</td>
+        </tr>
+        <tr>
+          <td>부종 감소</td>
+          <td>무거운 몸과 붓기 고민을 함께 케어합니다</td>
+          <td>아이콘 + 텍스트 카드</td>
+        </tr>
+        <tr>
+          <td>신진대사 촉진</td>
+          <td>일상의 활력을 높이는 건강한 관리</td>
+          <td>아이콘 + 텍스트 카드</td>
+        </tr>
+        <tr>
+          <td>단기 감량 지양</td>
+          <td>내 몸에 무리 없는 편안한 다이어트 여정</td>
+          <td>신뢰 강조 박스 (별도 분리)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>10. <span style="color: rgb(225, 83, 76);">후기</span> 섹션 가이드</h2>
+    <p>
+      후기 섹션은 로그인 후 확인이 가능해야합니다</p><p>로그인의 경우 형식적인 절차만 거치면 됩니다.</p><p>자극적인 체중 감량 수치보다
+      <strong>신뢰형 후기 구조</strong>를 우선시합니다.
+    </p>
+    <ul>
+      <li>
+        <strong>추천 후기 유형:</strong> 공감형(부담 없이 시작했다), 신뢰형(상담이 친절하고 꼼꼼하다), 결과형(일상이
+        가벼워졌다).
+      </li>
+      <li>
+        <strong>구조 제안:</strong> 상단에는 텍스트 중심의 짧은 후기 카드 그리드 배열, 하단에는 1~2개의 구체적인 상세
+        후기 블록 배치.
+      </li>
+      <li>
+        <strong>숫자형 배지:</strong> '누적 상담 OO건' 등의 신뢰 배지는 UI 자리만 확보해두고, 실제 수치는 클라이언트
+        수급 후 확정합니다.
+      </li>
+    </ul>
+
+    <h2>11. FAQ 설계</h2>
+    <p>
+      FAQ는 단순 정보 제공이 아닌 전환 저항을 해소하는 역할을 하므로 랜딩페이지 중앙(소개와 후기 사이 또는 직후)에
+      배치합니다.
+    </p>
+    <ul>
+      <li>
+        <strong>FAQ 항목:</strong>
+        <ol>
+          <li>감비환은 어떤 분들에게 적합한가요?</li>
+          <li>살은 보통 얼마나, 어떻게 빠지나요?</li>
+          <li>식사는 무조건 굶어야 하나요?</li>
+          <li>복용 시 부작용이나 몸에 무리가 없나요?</li>
+          <li>다른 병원 약이나 영양제와 같이 먹어도 되나요?</li>
+          <li>택배 배송은 어떻게 진행되나요?</li>
+          <li>요요를 방지하려면 어떻게 해야 하나요?</li>
+          <li>비대면 진료 및 상담 절차는 어떻게 되나요?</li>
+        </ol>
+      </li>
+    </ul>
+    <div class="warning-box">
+      주의/금기사항 및 개인차 안내 문구는 FAQ 내부에 숨기지 않고 별도의 '안내 박스'로 분리하여 투명하게 고지합니다.
+    </div>
+
+    <h2>12. CTA 및 전환 설계</h2>
+    <p>랜딩페이지 내 전환 버튼은 명확하고 일관되게 배치합니다.</p>
+    <ul>
+      <li><strong>우선순위:</strong> 1) 감비환 접수폼 2) 카카오 상담 3) 전화 상담</li>
+      <li><strong>배치 원칙:</strong> 히어로 섹션, 주요 설득 섹션 하단, 페이지 최하단에 반복 배치합니다.</li>
+      <li><strong>모바일 고정:</strong> 스크롤 시에도 화면 하단에 '카톡 상담' / '예약 접수' 고정 버튼바 노출.</li></ul>
+
+    <h2>13. 비주얼/톤앤매너 가이드</h2>
+    <ul>
+      <li>
+        <strong>색상:</strong> 기존 용인약손한의원 레퍼런스 기반... 올드한 감성이 좋을거같기도 합니다. 여성 웰니스초점이면 더 좋습니다</li>
+      <li>
+        <strong>스타일:</strong>&nbsp;텍스트 가독성을
+        최우선으로 합니다.
+      </li>
+      <li><strong>핵심:</strong> '예쁘고 화려한 랜딩'보다는 '신뢰 + 전환 + 정돈감'이 최우선입니다.</li>
+    </ul>
+
+    <h2>14. 산출물 가이드</h2>
+    <ul>
+      <li>
+        <strong>필수 산출물:</strong>
+        <ul>
+          <li>랜딩페이지 메인 시안 (모바일 최우선)</li>
+          <li>핵심 CTA 버튼 및 폼 UI 가이드</li>
+          <li>재사용 가능한 카드 컴포넌트 (후기, FAQ, 질환 소개)</li></ul></li>
+    </ul>
+
+    <h2>15. 풀 홈페이지 확장 방향</h2>
+    <p>
+      풀 홈페이지는 정적인 병원 소개 페이지가 아니라 유입(광고/블로그/CRM)별 첫 화면이 가변적으로 노출되는 운영형 전환
+      플랫폼입니다.&nbsp;</p><p>9개 Zone 기반(예: 근골격계, 다이어트, 여성질환 등)으로 콘텐츠를 구조화합니다.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>랜딩페이지 (1차)</th>
+          <th>풀 홈페이지 (2차)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>목적</strong></td>
+          <td>단일 주제(다이어트) 집중 전환</td>
+          <td>다양한 유입에 대응하는 통합 브랜드 자산화 및 예약 플랫폼</td>
+        </tr>
+        <tr>
+          <td><strong>구조</strong></td>
+          <td>세로 스크롤형 원페이지</td>
+          <td>9개 Zone IA 구조, 조립형 컴포넌트 시스템</td>
+        </tr>
+        <tr>
+          <td><strong>개인화</strong></td>
+          <td>단일 타깃</td>
+          <td>광고 / 블로그 / CRM 유입별 첫 화면 동적 변화</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>16. 컴포넌트 전략 및 자유도 정책</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>레벨</th>
+          <th>영역 및 설명</th>
+          <th>적용 컴포넌트 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Free</strong> (자유도 높음)</td>
+          <td>브랜드 개성을 나타내는 시각적 요소</td>
+          <td>컬러 테마, 원장 소개 카피, 대표 Zone 우선순위, 개별 BI/CI 스타일</td>
+        </tr>
+        <tr>
+          <td><strong>Guided</strong> (선택형 조립)</td>
+          <td>플랫폼 룰 내에서 템플릿 선택</td>
+          <td>상단 4블록 프리셋(Hero/대표 Zone/신뢰/콘텐츠), FAQ 배치</td>
+        </tr>
+        <tr>
+          <td><strong>Locked</strong> (고정)</td>
+          <td>핵심 전환 성과 및 시스템 유지 영역</td>
+          <td>유입별 분기 로직, 모바일 고정 CTA, Zone 분류 체계, 자동화 로직</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <strong>추천 홈페이지 타입 4종:</strong> 원장 브랜딩형, 증상 전환형, 콘텐츠 허브형, 재방문 관리형.<br>
+      용인약손한의원의 경우 초기에는 <strong>증상 전환형 + 일부 원장 신뢰 요소 혼합형</strong> 프리셋 적용이 적합합니다.
+    </p>
+
+    <h2>17. 랜딩과 풀 홈페이지 공통/재사용 컴포넌트 제안</h2>
+    <p>
+      1차 랜딩 작업 시 설계한 컴포넌트(Hero 타이포그래피 구조, CTA 버튼 세트, FAQ 아코디언 UI, 후기 카드, 모바일 고정
+      CTA 바 등)를 2차 풀 홈페이지의 한 컴포넌트로 사용할 수 있도록 구축해야
+      합니다.
+    </p>
+
+    <h2>18. 클라이언트 추가 요청 체크리스트</h2>
+    <p>기존 자료 외에 실제 개발 및 오픈을 위해 반드시 수급해야 할 정보입니다.</p>
+    <ul>
+      <li>
+        <strong>18-1. CTA/운영 정보:</strong>
+        <ul>
+          <li>최종 카카오톡 채널 링크&nbsp;<p>https://pf.kakao.com/_xlAzxkxb/chat</p>
+</li>
+          <li>실제 운영용 접수폼 링크 (현재 제공된 링크는 타 내용 노출로 재확인 필수) https://docs.google.com/forms/d/16D6tjTxBdkDnno9i0UQk5kU6Qbqw6uLkq1uRQQzpcd8/edit</li>
+          <li>병원 진료 및 전화 상담 가능 시간 (09:00-19:00)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>18-2. 제품/가격 정보:</strong>
+        <ul>
+          <li>[ ㅇ ] 감비환 단계별 구성 및 세부 가격표</li>
+          <li>[ ㅇ ] 보조환 3종의 명확한 복용 안내 설명</li>
+        </ul>
+      </li>
+      <li>
+        <strong>18-3. 후기/증빙 자료:</strong>
+        <ul>
+          <li>[ X ] 랜딩페이지에 활용 허가된 실제 텍스트 후기 원문 및 캡처본</li>
+        </ul>
+      </li>
+      <li>
+        <strong>18-4. 이미지/브랜드 자산:</strong>
+        <ul>
+          <li>[ X ] 약손감비환스틱 고해상도 제품 단독컷 및 패키지 컷</li>
+          <li>[ X ] 병원 공식 로고 원본 (AI/PNG)</li>
+          <li>[ X ] 병원 내부/외부 인테리어 사진 (가능 시)</li></ul></li><li><b>X 항목들은 채워드릴 수 있도록 하겠습니다</b></li><li><b>
+  
+    <!--StartFragment-->섹션 항목 체크리스트: <br>1. 히어로- 메인 헤드라인- 서브카피- CTA <br>2. 이런 분께 추천- 타깃
+    고객- 대표 고민 <br>3. 왜 우리 한의원인가- 차별점 3가지- 신뢰 포인트 <br>4. 진료/상품 설명- 진행 방식-
+    기간- 포함 항목 <br>5. FAQ- 자주 묻는 질문 <br>6. 최종 CTA- 상담신청 / 카톡문의 / 예약<!--EndFragment-->
+  
+
+<br></b></li>
+    </ul>
+
+    <h2><br></h2>
+
+    <h2>19. 최종 정리</h2>
+    <p><strong>핵심 5:</strong>&nbsp;</p><p>1) 모바일 최우선 세로형 세일즈 랜딩.&nbsp;</p><p>2) 과장 없는 한의원 특유의
+      차분한 톤앤매너</p><p>3) 소개/후기는 고객 공감 및 신뢰 형성 구조로 전개/ 후기는 별도 로그인</p><p>4) CTA와 FAQ는 이탈 방지용으로
+      전진 배치.&nbsp;</p><p>5) 풀 홈페이지 확장을 고려한 모듈형 컴포넌트 디자인.
+    </p>
+
+    <p>6) 반응형 웹 기반 모바일 UI 퍼포먼스 최적화.&nbsp;</p><p>7) 반복되는
+      카드/아코디언 UI의 컴포넌트화(재사용성).&nbsp;</p><p>8) 모바일 하단 고정 CTA 등 전환 트래킹 스크립트 심기 용이한 구조.&nbsp;</p><p>9) 2차
+      풀 홈페이지의 가변적 레이아웃에 대응할 수 있는 구조</p><p>빠른 로딩 속도</p>
+
+    <p>
+      <strong>다음 회의 내용 04.23</strong></p><p>1) 클라이언트에게 누락 자료(체크리스트) 확인</p><p>2) 랜딩페이지 모바일
+      와이어프레임 1차 리뷰</p><p>3) 브랜드 컬러 및 기본 타이포그래피(모노톤 테마) 스타일 가이드 확정</p><p>4) 전체적인 랜딩페이지 플로우
+      검증</p>
+
+    <br><ul>
+    </ul>
+  
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>

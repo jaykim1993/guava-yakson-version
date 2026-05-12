@@ -76,7 +76,7 @@
 /* ══════════════════════════════════════════════════
    원장 소개
 ══════════════════════════════════════════════════ */
-.doctorSection {
+/* .doctorSection {
   padding: 64px 24px;
   background: var(--c-cream);
 }
@@ -110,7 +110,6 @@
 }
 
 .doctorName {
-  /* font-family: var(--font-display); */
   font-size: 24px;
   font-weight: 700;
   color: var(--c-ink);
@@ -153,7 +152,7 @@
   height: 4px;
   border-radius: 50%;
   background: var(--c-gold);
-}
+} */
 
 /* ══════════════════════════════════════════════════
    병원 철학

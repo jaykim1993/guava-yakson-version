@@ -11,7 +11,7 @@
    페이지 공통
 ══════════════════════════════════════════════════ */
 .page {
-  padding: 20px 0 200px 0;
+  padding: 20px 0 120px 0;
 }
 
 /* ══════════════════════════════════════════════════
@@ -207,7 +207,7 @@
 /* ══════════════════════════════════════════════════
    카카오 로그인
 ══════════════════════════════════════════════════ */
-.inputGroup {
+/* .inputGroup {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -274,7 +274,7 @@
   gap: 10px;
   width: 100%;
   margin-bottom: 16px;
-}
+} */
 
 /* 카카오 로그인 — 노란 배경 */
 .kakaoBtn {
@@ -299,7 +299,7 @@
 }
 
 /* 카카오 회원가입 — 아웃라인 */
-.kakaoSignupBtn {
+/* .kakaoSignupBtn {
   width: 100%;
   display: flex;
   align-items: center;
@@ -318,7 +318,7 @@
 
 .kakaoSignupBtn:hover {
   background: #fffbe6;
-}
+} */
 
 /* ══════════════════════════════════════════════════
    반응형

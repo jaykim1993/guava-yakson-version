@@ -113,7 +113,7 @@ export default function AboutPage() {
       </section>
 
       {/* ② 원장 소개 */}
-      <section className={styles.doctorSection}>
+      {/* <section className={styles.doctorSection}>
         <div className={styles.doctorGrid}>
           <div className={styles.profileContainer}>
             <img className={styles.profile} src="./about/profile.png" alt="이관형 원장" />
@@ -127,7 +127,7 @@ export default function AboutPage() {
             </blockquote>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ③ 병원 철학 */}
       <section className={styles.sectionAlt}>

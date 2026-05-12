@@ -74,7 +74,7 @@ export default function ReviewsPage() {
         <div className={styles.gateBox}>
 
           {/* ID / PW 입력 */}
-          <div className={styles.inputGroup}>
+          {/* <div className={styles.inputGroup}>
             <input
               className={styles.input}
               type="text"
@@ -85,16 +85,16 @@ export default function ReviewsPage() {
               type="password"
               placeholder="비밀번호"
             />
-          </div>
+          </div> */}
 
           {/* 일반 로그인 버튼 */}
-          <button className={styles.loginBtn}>
+          {/* <button className={styles.loginBtn}>
             로그인
-          </button>
+          </button> */}
 
-          <div className={styles.divider}>
+          {/* <div className={styles.divider}>
             <span>또는</span>
-          </div>
+          </div> */}
 
           {/* 카카오 버튼 2개 */}
           <div className={styles.kakaoButtons}>
@@ -102,10 +102,10 @@ export default function ReviewsPage() {
               <RiKakaoTalkFill />
               카카오로 로그인하기
             </button>
-            <button className={styles.kakaoSignupBtn}>
+            {/* <button className={styles.kakaoSignupBtn}>
               <RiKakaoTalkFill />
               카카오로 회원가입하기
-            </button>
+            </button> */}
           </div>
 
         </div>
