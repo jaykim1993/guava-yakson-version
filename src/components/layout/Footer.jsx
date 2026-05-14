@@ -10,9 +10,9 @@ export default function Footer() {
       show: true
     },
     details: [
-      { id: 1, label: "대표원장", value: "이관형", show: false },
-      { id: 2, label: "사업자등록번호", value: "000-00-00000", show: false },
-      { id: 3, label: "주소", value: "경기도 용인시 처인구", show: true },
+      { id: 1, label: "대표", value: "이관형", show: true },
+      { id: 2, label: "사업자등록번호", value: "135-91-22991", show: true },
+      { id: 3, label: "주소", value: "경기도 용인시 처인구 김량장동 254-370번지 대흥빌딩 2층 205호", show: true },
       { id: 4, label: "대표번호", value: "031-338-2299", show: true },
     ],
     businessHours: [
@@ -37,7 +37,7 @@ export default function Footer() {
             .filter(item => item.show)
             .map((item, index) => (
               <span key={item.id} className={styles.infoItem}>
-                {item.value}
+                {item.label}: {item.value}
                 {index < footerData.details.filter(i => i.show).length - 1 && (
                   <span className={styles.divider}>|</span>
                 )}

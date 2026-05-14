@@ -1,8 +1,12 @@
+/* ============================================================
+   ReviewSection.css
+   ============================================================ */
+
 .review-imgWrapper {
   height: 380px;
   overflow: hidden;
   margin-bottom: 50px;
-  
+
 }
 
 .review-imgWrapper>img {
@@ -120,13 +124,16 @@
   .review-product__image {
     width: 100%;
   }
-  .review-more__overlay{
+
+  .review-more__overlay {
     padding: 100px 20px;
   }
-  .review-more__text{
+
+  .review-more__text {
     font-size: 13px;
   }
-  .review-more__btn{
+
+  .review-more__btn {
     font-size: 12px;
   }
 }

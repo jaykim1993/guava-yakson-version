@@ -5,7 +5,6 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import LandingPage from "./pages/landing/LandingPage";
 import AboutPage from "./pages/about/AboutPage";
-import TreatmentsPage from "./pages/treatments/TreatmentsPage";
 import ReviewsPage from "./pages/reviews/ReviewsPage";
 import FloatingCTA from "./components/cta/FloatingCTA";
 
